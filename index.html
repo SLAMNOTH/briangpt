@@ -275,6 +275,11 @@
             } else if (userInput.toLowerCase().includes("meeting")) {
 				botResponse.textContent = "BrianGPT: We gaan eens even genieten van een groene knuppel op zaterdag 18 maart tijdens de dabig meeting te Stern 27 betreffende de vakantie bespreking";
 
+			 //Games
+			} else if (userInput.toLowerCase().includes("clash") && userInput.toLowerCase().includes("beste")) {
+				botResponse.textContent = "BrianGPT: Hayday is de beste clash royale";
+			} else if (userInput.toLowerCase().includes("game") && userInput.toLowerCase().includes("beste")) {
+				botResponse.textContent = "BrianGPT: Hayday is de beste game";
 
 
              // Politiek
@@ -290,9 +295,37 @@
 				botResponse.textContent = "BrianGPT: Ik wil je niet verplichten om op Stef Kleine staarman te stemmen maar ik zal het wel aanraden, ik zou NOOIT links stemmen, dat is complete waanzin";
             
              //Codes
-            } else if (userInput.toLowerCase().includes("html")) {
-				botResponse.textContent = "BrianGPT: In de nabije toekomst zal de BrianGPT in staat zijn om codes te genereren";
-               
+			} else if (userInput.toLowerCase().includes("basis") && userInput.toLowerCase().includes("html")) {
+				botResponse.textContent = "BrianGPT:  <!DOCTYPE html> <html> <body>  <h1>My First Heading</h1> <p>My first paragraph.</p>  </body> </html> ";
+			} else if (userInput.toLowerCase().includes("basic") && userInput.toLowerCase().includes("html")) {
+				botResponse.textContent = "BrianGPT:  <!DOCTYPE html> <html> <body>  <h1>My First Heading</h1> <p>My first paragraph.</p>  </body> </html> ";
+
+
+			} else if (userInput.toLowerCase().includes("image") && userInput.toLowerCase().includes("html")) {
+				botResponse.textContent = "BrianGPT: <img src= jouwfoto.jpg width=104 height=142> ";
+			} else if (userInput.toLowerCase().includes("foto") && userInput.toLowerCase().includes("html")) {
+				botResponse.textContent = "BrianGPT: <img src= jouwfoto.jpg width=104 height=142> ";
+			} else if (userInput.toLowerCase().includes("images") && userInput.toLowerCase().includes("html")) {
+				botResponse.textContent = "BrianGPT: <img src= jouwfoto.jpg width=104 height=142> ";
+			} else if (userInput.toLowerCase().includes("pictures") && userInput.toLowerCase().includes("html")) {
+				botResponse.textContent = "BrianGPT: <img src= jouwfoto.jpg width=104 height=142> ";
+			} else if (userInput.toLowerCase().includes("image") && userInput.toLowerCase().includes("html")) {
+				botResponse.textContent = "BrianGPT: <img src= jouwfoto.jpg width=104 height=142> ";
+
+			} else if (userInput.toLowerCase().includes("processen") && userInput.toLowerCase().includes("shell")) {
+				botResponse.textContent = "BrianGPT: Get-Process | Sort-Object -Property ProcessName ";
+			} else if (userInput.toLowerCase().includes("taken") && userInput.toLowerCase().includes("shell")) {
+				botResponse.textContent = "BrianGPT: Get-Process | Sort-Object -Property ProcessName ";
+			} else if (userInput.toLowerCase().includes("cpu") && userInput.toLowerCase().includes("shell")) {
+				botResponse.textContent = "BrianGPT: Get-Process | measure CPU -Sum -Average -Maximum -Minimum";
+
+
+
+			} else if (userInput.toLowerCase().includes("html")) {
+				botResponse.textContent = "BrianGPT: Leg iets meer uit voor een goede HTML code!";
+			} else if (userInput.toLowerCase().includes("shell")) {
+				botResponse.textContent = "BrianGPT: Leg iets meer uit voor een goede Powershell code code!";
+
 			} else {
 				botResponse.textContent = "BrianGPT: Ik probeer je te begrijpen maar ben nu nog vrij dom";
 			}
