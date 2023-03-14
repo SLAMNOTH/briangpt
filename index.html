@@ -318,6 +318,12 @@
 				botResponse.textContent = "BrianGPT: Get-Process | Sort-Object -Property ProcessName ";
 			} else if (userInput.toLowerCase().includes("cpu") && userInput.toLowerCase().includes("shell")) {
 				botResponse.textContent = "BrianGPT: Get-Process | measure CPU -Sum -Average -Maximum -Minimum";
+			} else if (userInput.toLowerCase().includes("rip") && userInput.toLowerCase().includes("ipv6")) {
+				botResponse.textContent = "BrianGPT: Dit hoofdstuk behandelt de uitleg over RIP. R1 (config) #ipv6 router rip [RIP] R1 (config-rtr) #int [g0/0] R1 (config-if) #ipv6 rip [RIP] enable R1 (config-if) #no sh R1 (config-if) #int [s0/1/1] R1 (config-if) #ipv6 rip [RIP] enable R1 (config-if) #no sh R1 (config-if) #int [s0/1/0] R1 (config-if) #ipv6 rip [RIP] enable R1 (config-if) #no sh R1 (config-if) #exit Dit doe je voor elke router.";
+			} else if (userInput.toLowerCase().includes("ospf") && userInput.toLowerCase().includes("ipv6")) {
+				botResponse.textContent = "BrianGPT: In dit hoofdstuk behandel ik hoe je OSPF op routers kunt instellen. R1 (config) #ipv6 router ospf [1] R1 (config-rtr) #router-id [1.1.1.1] R1 (config-rtr) #int [g0/0] R1 (config-if) #ipv6 ospf [1] area [0] R1 (config-if) #int [s0/1/1] R1 (config-if) #ipv6 ospf [1] area [0] R1 (config-if) #int [s0/1/0] R1 (config-if) #ipv6 ospf [1] area [0] R1 (config-if) #exit Dit doe je op elke router en let er op dat de router-id verschillend moet zijn, maar wel gelijk aan het router-id van je EIGRP protocol.  Om te testen of je alle protocollen juist hebt ingesteld voer je de volgende commando uit. R1 #sh ipv6 protocols";
+			} else if (userInput.toLowerCase().includes("eigrp") && userInput.toLowerCase().includes("ipv6")) {
+				botResponse.textContent = "BrianGPT: In dit hoofdstuk leg ik uit hoe je EIGRP op routers kunt instellen. R1 (config) #ipv6 router eigrp [1] R1 (config-rtr) #eigrp router-id [1.1.1.1] R1 (config-rtr) #no sh R1 (config-rtr) #int [g0/0] R1 (config-if) #ipv6 eigrp [1] R1 (config-if) #no sh R1 (config-if) #int [s0/1/0] R1 (config-if) #ipv6 eigrp [1] R1 (config-if) #no sh R1 (config-if) #int [s0/1/1] R1 (config-if) #ipv6 eigrp [1] R1 (config-if) #no sh R1 (config-if) #exit Dit doe je op elke router en let er op dat elke router-id moet verschillend zijn (meer dan 2 lijntjes).";
 
 
 
