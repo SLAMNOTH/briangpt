@@ -131,259 +131,283 @@
     <br><br><br>
 	<script>
 		function sendMessage() {
-			var userInput = document.getElementById("input").value;
-			var chatbox = document.querySelector(".chatbox");
-			
-			// add user input to chatbox
-			var userMessage = document.createElement("p");
-			userMessage.classList.add("user");
-			userMessage.textContent = "You: " + userInput;
-			chatbox.appendChild(userMessage);
-			
-			// check input and add bot response to chatbox
-			var botResponse = document.createElement("p");
-			botResponse.classList.add("bot");
+    var userInput = document.getElementById("input").value;
+    var chatbox = document.querySelector(".chatbox");
 
-            // 
-			if (userInput.toLowerCase().includes("frogpire") && userInput.toLowerCase().includes("bornerbroek")) {
-				botResponse.textContent = "BrianGPT: Frogpire is sterker, groter en beter dan bornerbroek";
-			} else if (userInput.toLowerCase().includes("gay")) {
-				botResponse.textContent = "BrianGPT: Brian is inderdaad homo";
+    // add user input to chatbox
+    var userMessage = document.createElement("p");
+    userMessage.classList.add("user");
+    userMessage.textContent = "You: " + userInput;
+    chatbox.appendChild(userMessage);
+
+    // check input and add bot response to chatbox
+    var botResponse = document.createElement("p");
+    botResponse.classList.add("bot");
+    chatbox.appendChild(botResponse);
+
+    // set up typing animation
+    var botText = "BrianGPT: "; // start with the bot's name
+    if (userInput.toLowerCase().includes("frogpire") && userInput.toLowerCase().includes("bornerbroek")) {
+        botText += "Frogpire is sterker, groter en beter dan bornerbroek";
+    } else if (userInput.toLowerCase().includes("gay")) {
+        botText += "Brian is inderdaad homo";
+    } else if (userInput.toLowerCase().includes("html")) {
+        botText += "Leg iets meer uit voor een goede HTML code!";
+    } else if (userInput.toLowerCase().includes("shell")) {
+        botText += "Leg iets meer uit voor een goede Powershell code!";
+
+
+
+            } else if (userInput.toLowerCase().includes("gay")) {
+				botText += " Brian is inderdaad homo";
             } else if (userInput.toLowerCase().includes("opleiding") && userInput.toLowerCase().includes("davy")) {
-				botResponse.textContent = "BrianGPT: Op dit moment doet Davy een mbo 4 opleiding in almelo op de sumpel";            
+				botText += " Op dit moment doet Davy een mbo 4 opleiding in almelo op de sumpel";            
             } else if (userInput.toLowerCase().includes("opleiding") && userInput.toLowerCase().includes("jaydee")) {
-				botResponse.textContent = "BrianGPT: Op dit moment doet Jaydee een mbo 4 opleiding in almelo op de sumpel";
+				botText += " Op dit moment doet Jaydee een mbo 4 opleiding in almelo op de sumpel";
             } else if (userInput.toLowerCase().includes("opleiding") && userInput.toLowerCase().includes("antonie")) {
-				botResponse.textContent = "BrianGPT: Op dit moment doet Antonie een mbo 4 opleiding in almelo op de sumpel";
+				botText += " Op dit moment doet Antonie een mbo 4 opleiding in almelo op de sumpel";
             } else if (userInput.toLowerCase().includes("opleiding") && userInput.toLowerCase().includes("oonk")) {
-				botResponse.textContent = "BrianGPT: Op dit moment doet oonk een mbo opleiding in Hengelo";
+				botText += " Op dit moment doet oonk een mbo opleiding in Hengelo";
             } else if (userInput.toLowerCase().includes("opleiding") && userInput.toLowerCase().includes("antony")) {
-				botResponse.textContent = "BrianGPT: Op dit moment doet oonk een mbo opleiding in Hengelo";
+				botText += " Op dit moment doet oonk een mbo opleiding in Hengelo";
             } else if (userInput.toLowerCase().includes("mening") && userInput.toLowerCase().includes("politiek")) {
-				botResponse.textContent = "BrianGPT: Ik wil je niet verplichten om op Stef Kleine staarman te stemmen maar ik zal het wel aanraden, ik zou NOOIT links stemmen, dat is complete waanzin";
+				botText += " Ik wil je niet verplichten om op Stef Kleine staarman te stemmen maar ik zal het wel aanraden, ik zou NOOIT links stemmen, dat is complete waanzin";
             } else if (userInput.toLowerCase().includes("politiek")) {
-				botResponse.textContent = "BrianGPT: Ik wil je niet verplichten om op Stef Kleine staarman te stemmen maar ik zal het wel aanraden, ik zou NOOIT links stemmen, dat is complete waanzin";
+				botText += " Ik wil je niet verplichten om op Stef Kleine staarman te stemmen maar ik zal het wel aanraden, ik zou NOOIT links stemmen, dat is complete waanzin";
             } else if (userInput.toLowerCase().includes("snert")) {
-				botResponse.textContent = "BrianGPT: Snert is het beste eten anno 2023";
+				botText += " Snert is het beste eten anno 2023";
             } else if (userInput.toLowerCase().includes("valt") && userInput.toLowerCase().includes("mannen")) {
-				botResponse.textContent = "BrianGPT: Alleen brian valt op mannen";
+				botText += " Alleen brian valt op mannen";
             } else if (userInput.toLowerCase().includes("johan") && userInput.toLowerCase().includes("dogan")) {
-				botResponse.textContent = "BrianGPT: Johan dogan is de nederlandse andrew tate maar hij is wel brak";
+				botText += " Johan dogan is de nederlandse andrew tate maar hij is wel brak";
             } else if (userInput.toLowerCase().includes("oonk") && userInput.toLowerCase().includes("bedtijd")) {
-				botResponse.textContent = "BrianGPT: Antony moet om 21:00 slapen";
+				botText += " Antony moet om 21:00 slapen";
             } else if (userInput.toLowerCase().includes("oonk") && userInput.toLowerCase().includes("slapen")) {
-				botResponse.textContent = "BrianGPT: Antony moet om 21:00 slapen";
+				botText += " Antony moet om 21:00 slapen";
             } else if (userInput.toLowerCase().includes("oonk") && userInput.toLowerCase().includes("hoelaat")) {
-				botResponse.textContent = "BrianGPT: Antony moet om 21:00 slapen";
+				botText += " Antony moet om 21:00 slapen";
             } else if (userInput.toLowerCase().includes("antony") && userInput.toLowerCase().includes("hoelaat")) {
-				botResponse.textContent = "BrianGPT: Antony moet om 21:00 slapen";
+				botText += " Antony moet om 21:00 slapen";
             } else if (userInput.toLowerCase().includes("antony") && userInput.toLowerCase().includes("slapen")) {
-				botResponse.textContent = "BrianGPT: Antony moet om 21:00 slapen";
+				botText += " Antony moet om 21:00 slapen";
             } else if (userInput.toLowerCase().includes("antony") && userInput.toLowerCase().includes("bedtijd")) {
-				botResponse.textContent = "BrianGPT: Antony moet om 21:00 slapen";
+				botText += " Antony moet om 21:00 slapen";
             } else if (userInput.toLowerCase().includes("beste") && userInput.toLowerCase().includes("ai")) {
-				botResponse.textContent = "BrianGPT: Is dat nog een vraag anno 2023? BRIANGPT NATUURLIJK!";
+				botText += " Is dat nog een vraag anno 2023? BRIANGPT NATUURLIJK!";
             } else if (userInput.toLowerCase().includes("beste") && userInput.toLowerCase().includes("gpt")) {
-				botResponse.textContent = "BrianGPT: Is dat nog een vraag anno 2023? BRIANGPT NATUURLIJK!";
+				botText += " Is dat nog een vraag anno 2023? BRIANGPT NATUURLIJK!";
             } else if (userInput.toLowerCase().includes("goed") && userInput.toLowerCase().includes("ai")) {
-				botResponse.textContent = "BrianGPT: Is dat nog een vraag anno 2023? BRIANGPT NATUURLIJK!";
+				botText += " Is dat nog een vraag anno 2023? BRIANGPT NATUURLIJK!";
                 
              // Eten   
             } else if (userInput.toLowerCase().includes("eet") && userInput.toLowerCase().includes("davy")) {
-				botResponse.textContent = "BrianGPT: Davy eet niet zo veel.";
+				botText += " Davy eet niet zo veel.";
             } else if (userInput.toLowerCase().includes("eten") && userInput.toLowerCase().includes("davy")) {
-				botResponse.textContent = "BrianGPT: Davy eet niet zo veel.";    
+				botText += " Davy eet niet zo veel.";    
             } else if (userInput.toLowerCase().includes("eet") && userInput.toLowerCase().includes("brian")) {
-				botResponse.textContent = "BrianGPT: ik moet zeggen dat ik drentse worst donders lekker vind.";
+				botText += " ik moet zeggen dat ik drentse worst donders lekker vind.";
             } else if (userInput.toLowerCase().includes("oonk") && userInput.toLowerCase().includes("eten")) {
-				botResponse.textContent = "BrianGPT: Antony Oonk eet graag wafels.";
+				botText += " Antony Oonk eet graag wafels.";
             } else if (userInput.toLowerCase().includes("oonk") && userInput.toLowerCase().includes("eet")) {
-				botResponse.textContent = "BrianGPT: Antony Oonk eet graag wafels.";
+				botText += " Antony Oonk eet graag wafels.";
             } else if (userInput.toLowerCase().includes("antony") && userInput.toLowerCase().includes("eten")) {
-				botResponse.textContent = "BrianGPT: Antony Oonk eet graag wafels.";
+				botText += " Antony Oonk eet graag wafels.";
             } else if (userInput.toLowerCase().includes("antony") && userInput.toLowerCase().includes("eet")) {
-				botResponse.textContent = "BrianGPT: Antony Oonk eet graag wafels.";
+				botText += " Antony Oonk eet graag wafels.";
             } else if (userInput.toLowerCase().includes("eet") && userInput.toLowerCase().includes("ik")) {
-				botResponse.textContent = "BrianGPT: Je kan alleen vragen wat iemand eet niet ik ben je gek";
+				botText += " Je kan alleen vragen wat iemand eet niet ik ben je gek";
             } else if (userInput.toLowerCase().includes("dieet")) {
-				botResponse.textContent = "BrianGPT: ik zou van de brug af springen"; 
+				botText += " ik zou van de brug af springen"; 
             } else if (userInput.toLowerCase().includes("frituur")) {
-				botResponse.textContent = "BrianGPT: Beter een frikandel in het mandje dan 10 in de vriezer";
+				botText += " Beter een frikandel in het mandje dan 10 in de vriezer";
             } else if (userInput.toLowerCase().includes("eet") && userInput.toLowerCase().includes("sebastiaan")) {
-				botResponse.textContent = "BrianGPT: Sebastiaan vindt Shepherd’s Pie donders lekker";
+				botText += " Sebastiaan vindt Shepherd’s Pie donders lekker";
             } else if (userInput.toLowerCase().includes("eten") && userInput.toLowerCase().includes("sebastiaan")) {
-				botResponse.textContent = "BrianGPT: Sebastiaan vindt Shepherd’s Pie donders lekker";
+				botText += " Sebastiaan vindt Shepherd’s Pie donders lekker";
             } else if (userInput.toLowerCase().includes("eten") && userInput.toLowerCase().includes("antonie")) {
-				botResponse.textContent = "BrianGPT: Antonie houdt van peanuts is het";
+				botText += " Antonie houdt van peanuts is het";
             } else if (userInput.toLowerCase().includes("eet") && userInput.toLowerCase().includes("antonie")) {
-				botResponse.textContent = "BrianGPT: Antonie houdt van peanuts is het";
+				botText += " Antonie houdt van peanuts is het";
             } else if (userInput.toLowerCase().includes("eet") && userInput.toLowerCase().includes("jaydee")) {
-				botResponse.textContent = "BrianGPT: Jaydee eet heel de dag maria biscuit";
+				botText += " Jaydee eet heel de dag maria biscuit";
             } else if (userInput.toLowerCase().includes("eten") && userInput.toLowerCase().includes("jaydee")) {
-				botResponse.textContent = "BrianGPT: Jaydee eet heel de dag maria biscuit";
+				botText += " Jaydee eet heel de dag maria biscuit";
             } else if (userInput.toLowerCase().includes("eten") && userInput.toLowerCase().includes("henk")) {
-				botResponse.textContent = "BrianGPT: spaghetti";
+				botText += " spaghetti";
             } else if (userInput.toLowerCase().includes("eet") && userInput.toLowerCase().includes("henk")) {
-				botResponse.textContent = "BrianGPT: spaghetti";
+				botText += " spaghetti";
             } else if (userInput.toLowerCase().includes("recept") && userInput.toLowerCase().includes("eiwit")) {
-				botResponse.textContent = "BrianGPT: Hier is een recept met veel eiwitten: Mediterrane kabeljauw Ansjovis, tijm en citroen brengen dit gerecht op smaak voor 2 personen. Je hebt nodig: 1 rode en 1 groene paprika, 2 rode uien, 400 gram broccoli, 2 eetlepels olijfolie, 3 tomaten, tijm, 150 gram volkoren macaroni, 2 schijven citroen, 2 ansjovisfilets (blikje), 2 stukken kabeljauwfilet, peper.  Bereiding: Maak de groente schoon. Snijd de paprika’s in kleine blokjes en de uien in snippers. Verdeel de broccoli in roosjes en snijd de stelen in stukjes. Snijd de tomaten in stukken. Fruit 1 ui in 1 eetlepel olie zacht. Voeg de tomatenblokjes en wat tijm toe en laat de saus 15 minuten zacht sudderen. Kook de macaroni volgens de gebruiksaanwijzing op de verpakking. Halveer de schijven citroen. Snijd de ansjovisjes in stukjes. Verwarm de rest van de olie in een hapjespan en laat hierin de stukjes ansjovis wegsmelten. Bak de paprika en de rest van de ui zacht 5 minuten mee. Voeg wat tijm toe. Bestrooi de kabeljauw met peper. Leg de vis bij de paprika in de pan en voeg de stukken citroen toe. Stoof de vis in ca. 8 minuten gaar. Kook de broccoli in weinig water in ca. 4 minuten gaar. Schep de tomatensaus door de uitgelekte macaroni en geef de vis en de broccoli erbij.";
+				botText += " Hier is een recept met veel eiwitten: Mediterrane kabeljauw Ansjovis, tijm en citroen brengen dit gerecht op smaak voor 2 personen. Je hebt nodig: 1 rode en 1 groene paprika, 2 rode uien, 400 gram broccoli, 2 eetlepels olijfolie, 3 tomaten, tijm, 150 gram volkoren macaroni, 2 schijven citroen, 2 ansjovisfilets (blikje), 2 stukken kabeljauwfilet, peper.  Bereiding: Maak de groente schoon. Snijd de paprika’s in kleine blokjes en de uien in snippers. Verdeel de broccoli in roosjes en snijd de stelen in stukjes. Snijd de tomaten in stukken. Fruit 1 ui in 1 eetlepel olie zacht. Voeg de tomatenblokjes en wat tijm toe en laat de saus 15 minuten zacht sudderen. Kook de macaroni volgens de gebruiksaanwijzing op de verpakking. Halveer de schijven citroen. Snijd de ansjovisjes in stukjes. Verwarm de rest van de olie in een hapjespan en laat hierin de stukjes ansjovis wegsmelten. Bak de paprika en de rest van de ui zacht 5 minuten mee. Voeg wat tijm toe. Bestrooi de kabeljauw met peper. Leg de vis bij de paprika in de pan en voeg de stukken citroen toe. Stoof de vis in ca. 8 minuten gaar. Kook de broccoli in weinig water in ca. 4 minuten gaar. Schep de tomatensaus door de uitgelekte macaroni en geef de vis en de broccoli erbij.";
                 
              // Brian uitspraken   
             } else if (userInput.toLowerCase().includes("kaal")) {
-				botResponse.textContent = "BrianGPT: Ik vraag vaak wie er call wilt, dan stuur ik https://tenor.com/view/pingu-school-school-bell-ringing-the-bell-gif-22150054";   
+				botText += " Ik vraag vaak wie er call wilt, dan stuur ik https://tenor.com/view/pingu-school-school-bell-ringing-the-bell-gif-22150054";   
             } else if (userInput.toLowerCase().includes("pierik")) {
-				botResponse.textContent = "BrianGPT: De hond van jeroen pierik heeft 1 bankstel opgegeten en is daarna in zijn sterfbed geland";
+				botText += " De hond van jeroen pierik heeft 1 bankstel opgegeten en is daarna in zijn sterfbed geland";
             } else if (userInput.toLowerCase().includes("almelo")) {
-				botResponse.textContent = "BrianGPT: Almelo heeft heracles voetbal club volgens brian is dit de beste maar twente is wel beter";
+				botText += " Almelo heeft heracles voetbal club volgens brian is dit de beste maar twente is wel beter";
             } else if (userInput.toLowerCase().includes("opleiding") && userInput.toLowerCase().includes("brian")) {
-				botResponse.textContent = "BrianGPT: Op dit moment doet brian een hbo studie op het saxion";
+				botText += " Op dit moment doet brian een hbo studie op het saxion";
             } else if (userInput.toLowerCase().includes("homo")) {
-				botResponse.textContent = "BrianGPT: Brian is inderdaad homo";
+				botText += " Brian is inderdaad homo";
                 } else if (userInput.toLowerCase().includes("hoer")) {
-				botResponse.textContent = "BrianGPT: Brian is inderdaad een hoer";
+				botText += " Brian is inderdaad een hoer";
             } else if (userInput.toLowerCase().includes("sebastiaan")) {
-				botResponse.textContent = "BrianGPT: Sebastiaan is een van de grondleggers van de Dabig & CO Foundation";
+				botText += " Sebastiaan is een van de grondleggers van de Dabig & CO Foundation";
             } else if (userInput.toLowerCase().includes("val je op")) {
-				botResponse.textContent = "BrianGPT: Brian is inderdaad homo";
+				botText += " Brian is inderdaad homo";
           	} else if (userInput.toLowerCase().includes("hello")) {
-				botResponse.textContent = "BrianGPT: Hallo ik zal me even voorstellen, ik ben de brian gpt chatbot en ik ben vrij slim over het algemeen";
+				botText += " Hallo ik zal me even voorstellen, ik ben de brian gpt chatbot en ik ben vrij slim over het algemeen";
             } else if (userInput.toLowerCase().includes("kut")) {
-				botResponse.textContent = "BrianGPT: BrianGPT is nog in ontwikkeling";
+				botText += " BrianGPT is nog in ontwikkeling";
             } else if (userInput.toLowerCase().includes("hallo")) {
-				botResponse.textContent = "BrianGPT: Hallo ik zal me even voorstellen, ik ben de brian gpt chatbot en ik ben vrij slim over het algemeen";
+				botText += " Hallo ik zal me even voorstellen, ik ben de brian gpt chatbot en ik ben vrij slim over het algemeen";
             } else if (userInput.toLowerCase().includes("henk")) {
-				botResponse.textContent = "BrianGPT: Informatie over henk is geheim";
+				botText += " Informatie over henk is geheim";
             } else if (userInput.toLowerCase().includes("kank")) {
-				botResponse.textContent = "BrianGPT: krijg zelf kanker";
+				botText += " krijg zelf kanker";
             } else if (userInput.toLowerCase().includes("emo")) {
-				botResponse.textContent = "BrianGPT: Emo's moet je per direct in elkaar slaan en daarna slachten";
+				botText += " Emo's moet je per direct in elkaar slaan en daarna slachten";
             } else if (userInput.toLowerCase().includes("noob")) {
-				botResponse.textContent = "BrianGPT: Ik probeer goed te zijn maar jij vraagt te veel dikzak!";
+				botText += " Ik probeer goed te zijn maar jij vraagt te veel dikzak!";
             } else if (userInput.toLowerCase().includes("kindertaal")) {
-				botResponse.textContent = "BrianGPT:Kindertaal is op dit moment nog in de maak maar bij GPT2 komt dat";
+				botText += "Kindertaal is op dit moment nog in de maak maar bij GPT2 komt dat";
             } else if (userInput.toLowerCase().includes("hoi")) {
-				botResponse.textContent = "BrianGPT: Hallo ik zal me even voorstellen, ik ben de brian gpt chatbot en ik ben vrij slim over het algemeen";
+				botText += " Hallo ik zal me even voorstellen, ik ben de brian gpt chatbot en ik ben vrij slim over het algemeen";
             } else if (userInput.toLowerCase().includes("bla")) {
-				botResponse.textContent = "BrianGPT: blabla";
+				botText += " blabla";
             } else if (userInput.toLowerCase().includes("blabla")) {
-				botResponse.textContent = "BrianGPT: blabla";
+				botText += " blabla";
 			} else if (userInput.toLowerCase().includes("gaat") && userInput.toLowerCase().includes("hoe")) {
-				botResponse.textContent = "BrianGPT: Met mij gaat het goed, en met jou?";
+				botText += " Met mij gaat het goed, en met jou?";
 			} else if (userInput.toLowerCase().includes("Goed")) {
-				botResponse.textContent = "BrianGPT: Fijn om te horen!";
+				botText += " Fijn om te horen!";
 			} else if (userInput.toLowerCase().includes("Fout")) {
-				botResponse.textContent = "BrianGPT: oh dat is niet zo goed om te horen!";
+				botText += " oh dat is niet zo goed om te horen!";
 
             } else if (userInput.toLowerCase().includes("bier")) {
-				botResponse.textContent = "BrianGPT: We gaan eens even genieten van een groene knuppel";
+				botText += " We gaan eens even genieten van een groene knuppel";
             } else if (userInput.toLowerCase().includes("knuppel")) {
-				botResponse.textContent = "BrianGPT: We gaan eens even genieten van een groene knuppel";
+				botText += " We gaan eens even genieten van een groene knuppel";
             } else if (userInput.toLowerCase().includes("meeting")) {
-				botResponse.textContent = "BrianGPT: We gaan eens even genieten van een groene knuppel op zaterdag 18 maart tijdens de dabig meeting te Stern 27 betreffende de vakantie bespreking";
+				botText += " We gaan eens even genieten van een groene knuppel op zaterdag 18 maart tijdens de dabig meeting te Stern 27 betreffende de vakantie bespreking";
 
 			 //Games
 			} else if (userInput.toLowerCase().includes("clash") && userInput.toLowerCase().includes("beste")) {
-				botResponse.textContent = "BrianGPT: Hayday is de beste clash royale";
+				botText += " Hayday is de beste clash royale";
 			} else if (userInput.toLowerCase().includes("game") && userInput.toLowerCase().includes("beste")) {
-				botResponse.textContent = "BrianGPT: Hayday is de beste game";
+				botText += " Hayday is de beste game";
 			} else if (userInput.toLowerCase().includes("operator") && userInput.toLowerCase().includes("beste")) {
-				botResponse.textContent = "BrianGPT: Montagne op attack, Kapkan op Defense";
+				botText += " Montagne op attack, Kapkan op Defense";
 			} else if (userInput.toLowerCase().includes("operator") && userInput.toLowerCase().includes("slechtste")) {
-				botResponse.textContent = "BrianGPT: Het ligt niet aan de operator maar aan de gebruiker";
+				botText += " Het ligt niet aan de operator maar aan de gebruiker";
 			} else if (userInput.toLowerCase().includes("deck") && userInput.toLowerCase().includes("slechtste")) {
-				botResponse.textContent = "BrianGPT: Ladder deck is slecht";
+				botText += " Ladder deck is slecht";
 			} else if (userInput.toLowerCase().includes("deck") && userInput.toLowerCase().includes("beste")) {
-				botResponse.textContent = "BrianGPT: Huis deck is het beste deck";
+				botText += " Huis deck is het beste deck";
 			} else if (userInput.toLowerCase().includes("map") && userInput.toLowerCase().includes("beste")&& userInput.toLowerCase().includes("r6")) {
-				botResponse.textContent = "BrianGPT: Skyscraper is de beste rainbow six map";
+				botText += " Skyscraper is de beste rainbow six map";
 			} else if (userInput.toLowerCase().includes("map") && userInput.toLowerCase().includes("beste")&& userInput.toLowerCase().includes("rainbow")) {
-				botResponse.textContent = "BrianGPT: Skyscraper is de beste rainbow six map";
+				botText += " Skyscraper is de beste rainbow six map";
 			} else if (userInput.toLowerCase().includes("map") && userInput.toLowerCase().includes("slechtste")&& userInput.toLowerCase().includes("rainbow")) {
-				botResponse.textContent = "BrianGPT: Theme park is de slechtste rainbow six map";
+				botText += " Theme park is de slechtste rainbow six map";
 			} else if (userInput.toLowerCase().includes("map") && userInput.toLowerCase().includes("slechtste")&& userInput.toLowerCase().includes("r6")) {
-				botResponse.textContent = "BrianGPT: Theme park is de slechtste rainbow six map";
+				botText += " Theme park is de slechtste rainbow six map";
 			} else if (userInput.toLowerCase().includes("diamond") && userInput.toLowerCase().includes("level")) {
-				botResponse.textContent = "BrianGPT: While the best level to find the most diamonds is technically Y-level -59, we recommend mining for Minecraft diamonds at Y-level -53. -53 is the best level to mind for diamonds in Minecraft 1.19 due to the lava level at -54";
+				botText += " While the best level to find the most diamonds is technically Y-level -59, we recommend mining for Minecraft diamonds at Y-level -53. -53 is the best level to mind for diamonds in Minecraft 1.19 due to the lava level at -54";
 			} else if (userInput.toLowerCase().includes("satisfactory") && userInput.toLowerCase().includes("goed")) {
-				botResponse.textContent = "BrianGPT: Satisfactory is een goed spel";
+				botText += " Satisfactory is een goed spel";
 			} else if (userInput.toLowerCase().includes("satisfactory") && userInput.toLowerCase().includes("stom")) {
-				botResponse.textContent = "BrianGPT: Satisfactory is een goed spel, het vereist alleen veel breinkracht wat velen niet hebben";
+				botText += " Satisfactory is een goed spel, het vereist alleen veel breinkracht wat velen niet hebben";
 			} else if (userInput.toLowerCase().includes("satisfactory") && userInput.toLowerCase().includes("dom")) {
-				botResponse.textContent = "BrianGPT: Satisfactory is een goed spel, het vereist alleen veel breinkracht wat velen niet hebben";
+				botText += " Satisfactory is een goed spel, het vereist alleen veel breinkracht wat velen niet hebben";
 			} else if (userInput.toLowerCase().includes("satisfactory") && userInput.toLowerCase().includes("kut")) {
-				botResponse.textContent = "BrianGPT: Satisfactory is een goed spel, het vereist alleen veel breinkracht wat velen niet hebben";
+				botText += " Satisfactory is een goed spel, het vereist alleen veel breinkracht wat velen niet hebben";
 			} else if (userInput.toLowerCase().includes("satisfactory") && userInput.toLowerCase().includes("saai")) {
-				botResponse.textContent = "BrianGPT: Satisfactory is een goed spel, het vereist alleen veel breinkracht wat velen niet hebben";
+				botText += " Satisfactory is een goed spel, het vereist alleen veel breinkracht wat velen niet hebben";
 			} else if (userInput.toLowerCase().includes("satisfactory") && userInput.toLowerCase().includes("oonk")) {
-				botResponse.textContent = "BrianGPT: Satisfactory is een goed spel, daarom moet Antony het ook gaan spelen, het vereist alleen veel breinkracht";
+				botText += " Satisfactory is een goed spel, daarom moet Antony het ook gaan spelen, het vereist alleen veel breinkracht";
 			} else if (userInput.toLowerCase().includes("satisfactory") && userInput.toLowerCase().includes("antony")) {
-				botResponse.textContent = "BrianGPT: Satisfactory is een goed spel, daarom moet Antony het ook gaan spelen, het vereist alleen veel breinkracht";
+				botText += " Satisfactory is een goed spel, daarom moet Antony het ook gaan spelen, het vereist alleen veel breinkracht";
 			} else if (userInput.toLowerCase().includes("satisfactory") && userInput.toLowerCase().includes("brian")) {
-				botResponse.textContent = "BrianGPT: Satisfactory is een goed spel, daarom moet Brian het ook gaan spelen, het vereist alleen veel breinkracht";
+				botText += " Satisfactory is een goed spel, daarom moet Brian het ook gaan spelen, het vereist alleen veel breinkracht";
 
 
 
              // Politiek
             } else if (userInput.toLowerCase().includes("links")) {
-				botResponse.textContent = "BrianGPT: Ik wil je niet verplichten om op Stef Kleine staarman te stemmen maar ik zal het wel aanraden, ik zou NOOIT links stemmen, dat is complete waanzin";
+				botText += " Ik wil je niet verplichten om op Stef Kleine staarman te stemmen maar ik zal het wel aanraden, ik zou NOOIT links stemmen, dat is complete waanzin";
             } else if (userInput.toLowerCase().includes("kaag")) {
-				botResponse.textContent = "BrianGPT: Kaag is niks man, ik wil je niet verplichten om op Stef Kleine staarman te stemmen maar ik zal het wel aanraden, ik zou NOOIT links stemmen, dat is complete waanzin";
+				botText += " Kaag is niks man, ik wil je niet verplichten om op Stef Kleine staarman te stemmen maar ik zal het wel aanraden, ik zou NOOIT links stemmen, dat is complete waanzin";
             } else if (userInput.toLowerCase().includes("rutte")) {
-				botResponse.textContent = "BrianGPT: Mark is nog onderweg op de fiets maar ik wil je niet verplichten om op Stef Kleine staarman te stemmen maar ik zal het wel aanraden, ik zou NOOIT links stemmen, dat is complete waanzin";
+				botText += " Mark is nog onderweg op de fiets maar ik wil je niet verplichten om op Stef Kleine staarman te stemmen maar ik zal het wel aanraden, ik zou NOOIT links stemmen, dat is complete waanzin";
             } else if (userInput.toLowerCase().includes("stemmen")) {
-				botResponse.textContent = "BrianGPT: Ik wil je niet verplichten om op Stef Kleine staarman te stemmen maar ik zal het wel aanraden, ik zou NOOIT links stemmen, dat is complete waanzin";
+				botText += " Ik wil je niet verplichten om op Stef Kleine staarman te stemmen maar ik zal het wel aanraden, ik zou NOOIT links stemmen, dat is complete waanzin";
             } else if (userInput.toLowerCase().includes("beste")) {
-				botResponse.textContent = "BrianGPT: Ik wil je niet verplichten om op Stef Kleine staarman te stemmen maar ik zal het wel aanraden, ik zou NOOIT links stemmen, dat is complete waanzin";
+				botText += " Ik wil je niet verplichten om op Stef Kleine staarman te stemmen maar ik zal het wel aanraden, ik zou NOOIT links stemmen, dat is complete waanzin";
             
              //Codes
 			} else if (userInput.toLowerCase().includes("basis") && userInput.toLowerCase().includes("html")) {
-				botResponse.textContent = "BrianGPT:  <!DOCTYPE html> <html> <body>  <h1>My First Heading</h1> <p>My first paragraph.</p>  </body> </html> ";
+				botText += "  <!DOCTYPE html> <html> <body>  <h1>My First Heading</h1> <p>My first paragraph.</p>  </body> </html> ";
 			} else if (userInput.toLowerCase().includes("basic") && userInput.toLowerCase().includes("html")) {
-				botResponse.textContent = "BrianGPT:  <!DOCTYPE html> <html> <body>  <h1>My First Heading</h1> <p>My first paragraph.</p>  </body> </html> ";
+				botText += "  <!DOCTYPE html> <html> <body>  <h1>My First Heading</h1> <p>My first paragraph.</p>  </body> </html> ";
 
 
 			} else if (userInput.toLowerCase().includes("image") && userInput.toLowerCase().includes("html")) {
-				botResponse.textContent = "BrianGPT: <img src= jouwfoto.jpg width=104 height=142> ";
+				botText += " <img src= jouwfoto.jpg width=104 height=142> ";
 			} else if (userInput.toLowerCase().includes("foto") && userInput.toLowerCase().includes("html")) {
-				botResponse.textContent = "BrianGPT: <img src= jouwfoto.jpg width=104 height=142> ";
+				botText += " <img src= jouwfoto.jpg width=104 height=142> ";
 			} else if (userInput.toLowerCase().includes("images") && userInput.toLowerCase().includes("html")) {
-				botResponse.textContent = "BrianGPT: <img src= jouwfoto.jpg width=104 height=142> ";
+				botText += " <img src= jouwfoto.jpg width=104 height=142> ";
 			} else if (userInput.toLowerCase().includes("pictures") && userInput.toLowerCase().includes("html")) {
-				botResponse.textContent = "BrianGPT: <img src= jouwfoto.jpg width=104 height=142> ";
+				botText += " <img src= jouwfoto.jpg width=104 height=142> ";
 			} else if (userInput.toLowerCase().includes("image") && userInput.toLowerCase().includes("html")) {
-				botResponse.textContent = "BrianGPT: <img src= jouwfoto.jpg width=104 height=142> ";
+				botText += " <img src= jouwfoto.jpg width=104 height=142> ";
 
 			} else if (userInput.toLowerCase().includes("processen") && userInput.toLowerCase().includes("shell")) {
-				botResponse.textContent = "BrianGPT: Get-Process | Sort-Object -Property ProcessName ";
+				botText += " Get-Process | Sort-Object -Property ProcessName ";
 			} else if (userInput.toLowerCase().includes("taken") && userInput.toLowerCase().includes("shell")) {
-				botResponse.textContent = "BrianGPT: Get-Process | Sort-Object -Property ProcessName ";
+				botText += " Get-Process | Sort-Object -Property ProcessName ";
 			} else if (userInput.toLowerCase().includes("cpu") && userInput.toLowerCase().includes("shell")) {
-				botResponse.textContent = "BrianGPT: Get-Process | measure CPU -Sum -Average -Maximum -Minimum";
+				botText += " Get-Process | measure CPU -Sum -Average -Maximum -Minimum";
 			} else if (userInput.toLowerCase().includes("rip") && userInput.toLowerCase().includes("ipv6")) {
-				botResponse.textContent = "BrianGPT: Dit hoofdstuk behandelt de uitleg over RIP. R1 (config) #ipv6 router rip [RIP] R1 (config-rtr) #int [g0/0] R1 (config-if) #ipv6 rip [RIP] enable R1 (config-if) #no sh R1 (config-if) #int [s0/1/1] R1 (config-if) #ipv6 rip [RIP] enable R1 (config-if) #no sh R1 (config-if) #int [s0/1/0] R1 (config-if) #ipv6 rip [RIP] enable R1 (config-if) #no sh R1 (config-if) #exit Dit doe je voor elke router.";
+				botText += " Dit hoofdstuk behandelt de uitleg over RIP. R1 (config) #ipv6 router rip [RIP] R1 (config-rtr) #int [g0/0] R1 (config-if) #ipv6 rip [RIP] enable R1 (config-if) #no sh R1 (config-if) #int [s0/1/1] R1 (config-if) #ipv6 rip [RIP] enable R1 (config-if) #no sh R1 (config-if) #int [s0/1/0] R1 (config-if) #ipv6 rip [RIP] enable R1 (config-if) #no sh R1 (config-if) #exit Dit doe je voor elke router.";
 			} else if (userInput.toLowerCase().includes("ospf") && userInput.toLowerCase().includes("ipv6")) {
-				botResponse.textContent = "BrianGPT: In dit hoofdstuk behandel ik hoe je OSPF op routers kunt instellen. R1 (config) #ipv6 router ospf [1] R1 (config-rtr) #router-id [1.1.1.1] R1 (config-rtr) #int [g0/0] R1 (config-if) #ipv6 ospf [1] area [0] R1 (config-if) #int [s0/1/1] R1 (config-if) #ipv6 ospf [1] area [0] R1 (config-if) #int [s0/1/0] R1 (config-if) #ipv6 ospf [1] area [0] R1 (config-if) #exit Dit doe je op elke router en let er op dat de router-id verschillend moet zijn, maar wel gelijk aan het router-id van je EIGRP protocol.  Om te testen of je alle protocollen juist hebt ingesteld voer je de volgende commando uit. R1 #sh ipv6 protocols";
+				botText += " In dit hoofdstuk behandel ik hoe je OSPF op routers kunt instellen. R1 (config) #ipv6 router ospf [1] R1 (config-rtr) #router-id [1.1.1.1] R1 (config-rtr) #int [g0/0] R1 (config-if) #ipv6 ospf [1] area [0] R1 (config-if) #int [s0/1/1] R1 (config-if) #ipv6 ospf [1] area [0] R1 (config-if) #int [s0/1/0] R1 (config-if) #ipv6 ospf [1] area [0] R1 (config-if) #exit Dit doe je op elke router en let er op dat de router-id verschillend moet zijn, maar wel gelijk aan het router-id van je EIGRP protocol.  Om te testen of je alle protocollen juist hebt ingesteld voer je de volgende commando uit. R1 #sh ipv6 protocols";
 			} else if (userInput.toLowerCase().includes("eigrp") && userInput.toLowerCase().includes("ipv6")) {
-				botResponse.textContent = "BrianGPT: In dit hoofdstuk leg ik uit hoe je EIGRP op routers kunt instellen. R1 (config) #ipv6 router eigrp [1] R1 (config-rtr) #eigrp router-id [1.1.1.1] R1 (config-rtr) #no sh R1 (config-rtr) #int [g0/0] R1 (config-if) #ipv6 eigrp [1] R1 (config-if) #no sh R1 (config-if) #int [s0/1/0] R1 (config-if) #ipv6 eigrp [1] R1 (config-if) #no sh R1 (config-if) #int [s0/1/1] R1 (config-if) #ipv6 eigrp [1] R1 (config-if) #no sh R1 (config-if) #exit Dit doe je op elke router en let er op dat elke router-id moet verschillend zijn (meer dan 2 lijntjes).";
+				botText += " In dit hoofdstuk leg ik uit hoe je EIGRP op routers kunt instellen. R1 (config) #ipv6 router eigrp [1] R1 (config-rtr) #eigrp router-id [1.1.1.1] R1 (config-rtr) #no sh R1 (config-rtr) #int [g0/0] R1 (config-if) #ipv6 eigrp [1] R1 (config-if) #no sh R1 (config-if) #int [s0/1/0] R1 (config-if) #ipv6 eigrp [1] R1 (config-if) #no sh R1 (config-if) #int [s0/1/1] R1 (config-if) #ipv6 eigrp [1] R1 (config-if) #no sh R1 (config-if) #exit Dit doe je op elke router en let er op dat elke router-id moet verschillend zijn (meer dan 2 lijntjes).";
 
 
 
 			} else if (userInput.toLowerCase().includes("html")) {
-				botResponse.textContent = "BrianGPT: Leg iets meer uit voor een goede HTML code!";
+				botText += " Leg iets meer uit voor een goede HTML code!";
 			} else if (userInput.toLowerCase().includes("shell")) {
-				botResponse.textContent = "BrianGPT: Leg iets meer uit voor een goede Powershell code code!";
+				botText += " Leg iets meer uit voor een goede Powershell code code!";
 
-			} else {
-				botResponse.textContent = "BrianGPT: Ik probeer je te begrijpen maar ben nu nog vrij dom";
-			}
-			chatbox.appendChild(botResponse);
-			
-			// clear input field
-			document.getElementById("input").value = "";
-			
-			// scroll to bottom of chatbox
-			chatbox.scrollTop = chatbox.scrollHeight;
-		}
+
+
+
+    } else {
+        botText += "Ik probeer je te begrijpen maar ben nu nog vrij dom";
+    }
+    var botIndex = 0; // current index of the bot text being typed
+    var typingInterval = 50; // interval in milliseconds between typing each character
+    var typingTimer = setInterval(function() {
+        if (botIndex < botText.length) {
+            botResponse.textContent += botText.charAt(botIndex);
+            botIndex++;
+        } else {
+            clearInterval(typingTimer); // stop typing animation after all characters have been typed
+        }
+    }, typingInterval);
+
+    // clear input field
+    document.getElementById("input").value = "";
+
+    // scroll to bottom of chatbox
+    chatbox.scrollTop = chatbox.scrollHeight;
+}
+
 	</script>
 </body>
 </html>
