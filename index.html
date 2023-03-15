@@ -68,13 +68,22 @@
 		}
 		
 		.user {
-			color: #007bff;
+			color: #ffffff;
+
 		}
 		
 		.bot {
-			color: #28a745;
+			color: #cacaca;
+              font-weight: bold;
 		}
 		
+        .bot2 {
+			color: #cacaca;
+            font-weight: bold;
+            font-size: 16px;
+		}
+        
+        
 		input[type=text] {
 			width: 85%;
 			padding: 12px 20px;
@@ -100,8 +109,13 @@
 		}
 		
 		.center {
+			text-align: left;
+		}
+        
+        .links {
 			text-align: center;
 		}
+        
          .topbar a.premium {
             background-color: gold;
                 font-weight: bold;
@@ -118,6 +132,10 @@
       height: 100%;
       object-fit: cover;
     }
+    
+    h2, h4 {
+    margin-left: 20px;
+}
 	</style>
 </head>
 <body>
@@ -131,17 +149,19 @@
 
 	<div class="center">
 		<div class="chatbox">
-			<p class="bot">Hallo, ik ben de nieuwe BrianGPT, vraag me alles wat je wilt weten</p>
+			<p class="bot2">Hallo, ik ben de nieuwe BrianGPT, vraag me alles wat je wilt weten</p>
 		</div>
-		<input type="text" id="input" name="input" placeholder="Vraag me alles, zo gek als het maar kan" onkeydown="if(event.keyCode==13) sendMessage()">
+		<input type="text" id="input" name="input" placeholder="Vraag me alles, zo gek als het maar kan" onkeydown="if(event.keyCode==13) sendMessage()" style="margin-left: 20px;">
 		<button onclick="sendMessage()">Sturen</button>
 	</div>
     <br>
     <div class="container">
     <img src="https://i.imgur.com/AX0XMvt.png" alt="Your Image" width="1920" height="1080" class="image">
     <section>
-        <h2>&nbsp;&nbsp;&nbsp;&nbsp;BrianGPT version 0.1.0A</h2>
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This is an early access build of the BrianGPT</p>
+		<section>
+			<h2>When will BrianGPT2 come out?</h2>
+			<h4>BrianGPT is currently on BrianGPT1 version 0.4.8A, this is an early access build of the BrianGPT. BrianGPT2 will come out on 17 march 2023!</h4></p>
+		</section>
     </section>
     </div>
     <br><br><br>
@@ -159,7 +179,7 @@
     // add user input to chatbox
     var userMessage = document.createElement("p");
     userMessage.classList.add("user");
-    userMessage.textContent = "You: " + userInput;
+    userMessage.textContent = "Jij: " + userInput;
     chatbox.appendChild(userMessage);
 
     // check input and add bot response to chatbox
