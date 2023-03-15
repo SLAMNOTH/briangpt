@@ -549,10 +549,16 @@
 				botText += "Wat is het verschil tussen een democratie en een dictatuur? Antwoord: In een democratie hebben burgers inspraak in de besluitvorming door middel van verkiezingen en vrijheid van meningsuiting, terwijl in een dictatuur één persoon of een kleine groep mensen de macht heeft en er weinig tot geen individuele vrijheid is.";   
             } else if (userInput.toLowerCase().includes("democratie") && userInput.toLowerCase().includes("dictator")) {
 				botText += "Wat is het verschil tussen een democratie en een dictatuur? Antwoord: In een democratie hebben burgers inspraak in de besluitvorming door middel van verkiezingen en vrijheid van meningsuiting, terwijl in een dictatuur één persoon of een kleine groep mensen de macht heeft en er weinig tot geen individuele vrijheid is.";   
-
-                
-
-
+            } else if (userInput.toLowerCase().includes("talen") && userInput.toLowerCase().includes("spreek")) {
+				botText += "Ik spreek alleen Nederlands en een klein beetje Engels";
+            } else if (userInput.toLowerCase().includes("taal") && userInput.toLowerCase().includes("spreek")) {
+				botText += "Ik spreek alleen Nederlands en een klein beetje Engels";
+            } else if (userInput.toLowerCase().includes("talen") && userInput.toLowerCase().includes("spreak")) {
+				botText += "Ik spreek alleen Nederlands en een klein beetje Engels";
+            } else if (userInput.toLowerCase().includes("talen") && userInput.toLowerCase().includes("praat")) {
+				botText += "Ik spreek alleen Nederlands en een klein beetje Engels";
+            } else if (userInput.toLowerCase().includes("talen") && userInput.toLowerCase().includes("spreken")) {
+				botText += "Ik spreek alleen Nederlands en een klein beetje Engels";
 
                 
 
@@ -568,7 +574,7 @@
         botText += "Ik probeer je te begrijpen maar ben nu nog vrij dom";
     }
     var botIndex = 0; // current index of the bot text being typed
-    var typingInterval = 60; // interval in milliseconds between typing each character
+    var typingInterval = 50; // interval in milliseconds between typing each character
     var typingTimer = setInterval(function() {
         if (botIndex < botText.length) {
             botResponse.textContent += botText.charAt(botIndex);
