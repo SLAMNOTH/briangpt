@@ -1,42 +1,54 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Login Page</title>
-    <style>
-    @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+<head>
+	<title>BrianGPT - Premium</title>
+	<link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/SLAMNOTH/BrianGPT/main/favicon.ico">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+	<meta name="title" content="BrianGPT - BrianGPT is the new Brian AI, it is the best in the world!">
+    <meta name="description" content="BrianGPT was not like any other AI system that existed in the market. It was the result of years of research and development by a team of expert data scientists and machine learning engineers.">
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://chat.briangpt.nl">
+    <meta property="og:title" content="BrianGPT - BrianGPT is the new Brian AI, it is the best in the world!">
+    <meta property="og:description" content="BrianGPT was not like any other AI system that existed in the market. It was the result of years of research and development by a team of expert data scientists and machine learning engineers.">
+    <meta property="og:image" content="https://i.imgur.com/dwDWBu4.png">
 
-body {
-			background-color: #222222;
-			color: #f2f2f2;
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://chat.briangpt.nl">
+    <meta property="twitter:title" content="BrianGPT - BrianGPT is the new Brian AI, it is the best in the world!">
+    <meta property="twitter:description" content="BrianGPT was not like any other AI system that existed in the market. It was the result of years of research and development by a team of expert data scientists and machine learning engineers.">
+    <meta property="twitter:image" content="https://i.imgur.com/dwDWBu4.png">
+	<style>
+		body {
+			background: #272727;
 			font-family: Arial, sans-serif;
 			font-size: 14px;
 			line-height: 1.5;
 			margin: 0;
+            
+      cursor: url(‘https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Eopsaltria_australis_-_Mogo_Campground.jpg/640px-Eopsaltria_australis_-_Mogo_Campground.jpg’), auto;
 		}
 
         .topbar {
-            background-color: #333;
+            background-color: #272727;
             overflow: hidden;
+            font-family: 'Poppins'
+            
           }
           
           .topbar a {
             float: left;
             color: #f2f2f2;
             text-align: center;
-            padding: 14px 16px;
+            padding: 34px 0px;
             text-decoration: none;
             font-size: 17px;
+            font-family: 'Poppins'
           }
           
           .topbar a:hover {
-            background-color: #ddd;
-            color: black;
+            background-color: #272727;
+            color: rgb(197, 197, 197);
           }
           
           .topbar a.active {
@@ -44,11 +56,106 @@ body {
             color: white;
           }
           
-           .topbar a.premium {
-            background-color: gold;
+		
+		.chatbox {
+			border: 2px solid #f2f2f2;
+			padding: 10px;
+			margin: 20px;
+			overflow: auto;
+			height: 500px;
+            
+			background: rgba( 255, 255, 255, 0.25 );
+			box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.46);
+			backdrop-filter: blur( 9px );
+			-webkit-backdrop-filter: blur( 9px );
+			border-radius: 10px;
+			border: 1px solid rgba( 255, 255, 255, 0.18 );
+		}
+		
+		.chatbox p {
+			margin: 10px 0;
+		}
+		
+		.user {
+			color: #ffffff;
+
+		}
+		
+		.bot {
+			color: #cacaca;
+              font-weight: bold;
+		}
+		
+        .bot2 {
+			color: #cacaca;
+            font-weight: bold;
+            font-size: 16px;
+		}
+        
+        
+		input[type=text] {
+			width: 85%;
+			padding: 12px 20px;
+			margin: 10px 20;
+			box-sizing: border-box;
+            background: rgba( 255, 255, 255, 0.25 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 9px );
+-webkit-backdrop-filter: blur( 9px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+		}
+		
+		button {
+            width: 10%;
+			padding: 12px 20px;
+			margin: 10px 20;
+            background: rgba( 255, 255, 255, 0.25 );
+            box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+            backdrop-filter: blur( 9px );
+            -webkit-backdrop-filter: blur( 9px );
+            border-radius: 10px;
+            border: 1px solid rgba( 255, 255, 255, 0.18 );
+		}
+		
+		button:hover {
+            background: rgb(0,168,156);
+background: radial-gradient(circle, rgba(0,168,156,1) 0%, rgba(11,114,134,0.0388887977065826) 27%); 
+		}
+		
+		.center {
+			text-align: left;
+		}
+        
+        .links {
+			text-align: center;
+		}
+        
+         .topbar a.premium {
+            background-color: #272727;
                 font-weight: bold;
+				margin-right: 300px;
           }
-          
+    
+
+    .image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    h2, h4 {
+    margin-left: 20px;
+}
+ text4 {
+    margin-left: 20px;
+}
+
+
+
+
+
+
 .container {
   background: #fff;
   border-radius: 5px;
@@ -58,7 +165,6 @@ body {
   position: relative;
   text-align: center;
   width: 400px;
-  text-color: black;
 }
 
 h1 {
@@ -112,12 +218,14 @@ button:hover {
 p {
   margin-top: 20px;
   color: #a6a6a6;
+  line-height: 20%;
 }
 
 a {
   color: #1abc9c;
   text-decoration: none;
   transition: color 0.3s ease;
+  line-height: 20%;
 }
 
 a:hover {
@@ -147,32 +255,100 @@ color: #a6a6a6;
   100% {
     transform: translateX(0px);
     }
-    </style>
-    
-  </head>
-  <body>
-  <div class="topbar">
-  <a href="https://chat.briangpt.nl">Chat with BrianGPT</a>
-  <a href="https://chat.briangpt.nl/about">About</a>
-  <a href="https://chat.briangpt.nl/contact">Contact</a>
+
+}
+	</style>
+</head>
+<body>
+<div class="topbar">
+  <a style="margin-left: 130px;" href="https://chat.briangpt.nl">Home</a>
+  <a style="margin-left: 30px;" href="https://chat.briangpt.nl/chat">Chat with BrianGPT</a>
+  <a style="margin-left: 30px;" href="https://chat.briangpt.nl/about">About</a>
+  <a style="margin-left: 30px;" href="https://chat.briangpt.nl/contact">Contact</a>
   <a href="https://chat.briangpt.nl/premium" class="premium" style="float:right">Buy Premium 👑</a>
-   <a href="https://chat.briangpt.nl/login" style="float:right">Login</a>
+   <a href="https://chat.briangpt.nl/login" style="float:right; margin-right: 30px;">Login</a>
 </div>
-    <div class="container">
-      <h1>Login</h1>
-      <form>
-        <div class="input-group">
-          <label for="username">Username</label>
-          <input type="text" id="username" name="username" required>
-        </div>
-        <div class="input-group">
-          <label for="password">Password</label>
-          <input type="password" id="password" name="password" required>
-        </div>
-        <button type="submit">Log In</button>
-      </form>
-      <p>Don't have an account? <a href="#">Sign up</a></p>
+
+	<div class="text4">
+    
+    <p style="font-size: 46px; margin-left: 120px;  max-width: 1600px; font-weight: 700; letter-spacing: 1px; line-height: 52px; background: linear-gradient(134deg, rgba(59.48, 245.62, 133.93, 1) 51%, rgba(75.62, 168.75, 254.72, 1) 90%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Login to your BrianGPT account</p>
+</div>
+
+<div class="container">
+    <h1>Login</h1>
+    <form>
+      <div class="input-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required>
+      </div>
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <button type="submit">Log In</button>
+    </form>
+    <p>Don't have an account? <a style="line-height: 80%;" href="https://chat.briangpt.nl/signup">Sign up</a></p>
+    <p>Forgot your password? <a style="line-height: 20%;" href="https://chat.briangpt.nl/forgotpwd">Recover</a></p>
+  </div>
+  <script src="script.js"></script>
+    
+
+    <section>
+
+    </section>
     </div>
-    <script src="script.js"></script>
-  </body>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+   
+    </body>
+	<script>
+		function sendMessage() {
+    var userInput = document.getElementById("input").value;
+    var chatbox = document.querySelector(".chatbox");
+
+    // add user input to chatbox
+    var userMessage = document.createElement("p");
+    userMessage.classList.add("user");
+    userMessage.textContent = "Jij: " + userInput;
+    chatbox.appendChild(userMessage);
+
+    // check input and add bot response to chatbox
+    var botResponse = document.createElement("p");
+    botResponse.classList.add("bot");
+    chatbox.appendChild(botResponse);
+
+    // set up typing animation
+    var botText = "BrianGPT: "; // start with the bot's name
+    if (userInput.toLowerCase().includes("frogpire") && userInput.toLowerCase().includes("bornerbroek")) {
+        botText += "Frogpire is sterker, groter en beter dan bornerbroek";
+    } else if (userInput.toLowerCase().includes("gay")) {
+        botText += "Brian is inderdaad homo";
+
+
+    } else {
+        botText += "Ik probeer je te begrijpen maar ben nu nog vrij dom";
+    }
+    var botIndex = 0; // current index of the bot text being typed
+    var typingInterval = 50; // interval in milliseconds between typing each character
+    var typingTimer = setInterval(function() {
+        if (botIndex < botText.length) {
+            botResponse.textContent += botText.charAt(botIndex);
+            botIndex++;
+        } else {
+            clearInterval(typingTimer); // stop typing animation after all characters have been typed
+        }
+    }, typingInterval);
+
+    // clear input field
+    document.getElementById("input").value = "";
+
+    // scroll to bottom of chatbox
+    chatbox.scrollTop = chatbox.scrollHeight;
+}
+
+	</script>
+</body>
 </html>
