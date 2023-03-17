@@ -1,33 +1,55 @@
+<!DOCTYPE html>
 <html>
 <head>
-	<title>About BrianGPT AI Technology</title>
-    <style>
-   		body {
-			background-color: #222222;
-			color: #f2f2f2;
+	<title>BrianGPT - Chat</title>
+	<link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/SLAMNOTH/BrianGPT/main/favicon.ico">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <meta name="title" content="BrianGPT - BrianGPT is the new Brian AI, it is the best in the world!">
+    <meta name="description" content="BrianGPT was not like any other AI system that existed in the market. It was the result of years of research and development by a team of expert data scientists and machine learning engineers.">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://chat.briangpt.nl">
+    <meta property="og:title" content="BrianGPT - BrianGPT is the new Brian AI, it is the best in the world!">
+    <meta property="og:description" content="BrianGPT was not like any other AI system that existed in the market. It was the result of years of research and development by a team of expert data scientists and machine learning engineers.">
+    <meta property="og:image" content="https://i.imgur.com/dwDWBu4.png">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://chat.briangpt.nl">
+    <meta property="twitter:title" content="BrianGPT - BrianGPT is the new Brian AI, it is the best in the world!">
+    <meta property="twitter:description" content="BrianGPT was not like any other AI system that existed in the market. It was the result of years of research and development by a team of expert data scientists and machine learning engineers.">
+    <meta property="twitter:image" content="https://i.imgur.com/dwDWBu4.png">
+
+	<style>
+		body {
+			background: #272727;
 			font-family: Arial, sans-serif;
 			font-size: 14px;
 			line-height: 1.5;
 			margin: 0;
+            
+      cursor: url(‘https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Eopsaltria_australis_-_Mogo_Campground.jpg/640px-Eopsaltria_australis_-_Mogo_Campground.jpg’), auto;
 		}
 
         .topbar {
-            background-color: #333;
-            overflow: hidden;
+            background-color: #272727;
+            overflow: hidden;.
+            font-family: 'Poppins'
+            
           }
           
           .topbar a {
             float: left;
             color: #f2f2f2;
             text-align: center;
-            padding: 14px 16px;
+            padding: 34px 0px;
             text-decoration: none;
             font-size: 17px;
+            font-family: 'Poppins'
           }
           
           .topbar a:hover {
-            background-color: #ddd;
-            color: black;
+            background-color: #272727;
+            color: rgb(197, 197, 197);
           }
           
           .topbar a.active {
@@ -35,74 +57,210 @@
             color: white;
           }
           
-           .topbar a.premium {
-            background-color: gold;
+		
+		.chatbox {
+			border: 0px solid #f2f2f2;
+			padding: 10px;
+			margin-left: 120px;
+            margin-right: 220px;
+			overflow: auto;
+			height: 500px;
+            
+            background: rgb(59,246,134);
+            background: linear-gradient(74deg, rgba(59,246,134,0.1) 55%, rgba(76,169,255,0.1) 79%, rgba(76,169,255,0.1) 100%); 
+            box-shadow: 0 8px 32px 0 rgba(37, 158, 128, 0.37);
+            backdrop-filter: blur( 7px );
+            -webkit-backdrop-filter: blur( 7px );
+            border-radius: 20px;
+            border: 1px solid rgba( 255, 255, 255, 0.18 );
+		}
+		
+		.chatbox p {
+			margin: 10px 0;
+		}
+		
+		.user {
+			color: #ffffff;
+            font-size: 16px;
+
+		}
+		
+		.bot {
+			color: #cacaca;
+              font-weight: bold;
+              font-size: 16px;
+		}
+		
+        .bot2 {
+			color: #cacaca;
+            font-weight: bold;
+            font-size: 16px;
+		}
+        
+        
+		input[type=text] {
+            color: #ffffff;
+			width: 69%;
+			padding: 12px 20px;
+			margin: 10px 20;
+			box-sizing: border-box;
+            background: rgb(59,246,134);
+            background: linear-gradient(74deg, rgba(103, 255, 164, 0.1) 55%, rgba(115, 187, 255, 0.1) 79%, rgba(110, 185, 255, 0.1) 100%); 
+            box-shadow: 0 8px 32px 0 rgba(37, 158, 128, 0.37);
+            backdrop-filter: blur( 7px );
+            -webkit-backdrop-filter: blur( 7px );
+            border-radius: 20px;
+            border: 1px solid rgba( 255, 255, 255, 0.18 );
+            margin-left: 120px;
+		}
+		
+		button {
+            width: 13%;
+			padding: 12px 20px;
+			margin: 10px 20;
+            background: rgb(59,246,134);
+            background: linear-gradient(74deg, rgba(103, 255, 164, 0.1) 55%, rgba(115, 187, 255, 0.1) 79%, rgba(110, 185, 255, 0.1) 100%); 
+            box-shadow: 0 8px 32px 0 rgba(37, 158, 128, 0.37);
+            backdrop-filter: blur( 9px );
+            -webkit-backdrop-filter: blur( 9px );
+            border-radius: 20px;
+            border: 1px solid rgba( 255, 255, 255, 0.18 );
+		}
+		
+		button:hover {
+            background: rgb(0,168,156);
+background: linear-gradient(74deg, rgba(218, 253, 231, 0.1) 55%, rgba(240, 248, 255, 0.1) 79%, rgba(224, 239, 253, 0.1) 100%);
+		}
+		
+		.center {
+			text-align: left;
+		}
+        
+        .links {
+			text-align: center;
+		}
+        
+         .topbar a.premium {
+            background-color: #272727;
                 font-weight: bold;
+				margin-right: 300px;
           }
-          
-		h2, h4 {
+              .container {
+      width: 100%;
+      float: left;
+      padding: 0px;
+      box-sizing: border-box;
+    }
+
+    .image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    h2, h4 {
+    margin-left: 20px;
+    font-family: 'Poppins';
+    color: #ffffff;
+    margin-left: 130px;
+    max-width: 1200px;
+}
+ text4 {
     margin-left: 20px;
 }
 
-	h1 {
-    margin-left: 15px;
-}
-p {
-    margin-left: 15px;
-}
-          
-          </style>
+	</style>
 </head>
 <body>
 <div class="topbar">
-  <a href="https://chat.briangpt.nl">Chat with BrianGPT</a>
-  <a href="https://chat.briangpt.nl/about">About</a>
-  <a href="https://chat.briangpt.nl/contact">Contact</a>
+  <a style="margin-left: 130px;" href="https://chat.briangpt.nl">Home</a>
+  <a style="margin-left: 30px;" href="https://chat.briangpt.nl/chat">Chat with BrianGPT</a>
+  <a style="margin-left: 30px;" href="https://chat.briangpt.nl/about">About</a>
+  <a style="margin-left: 30px;" href="https://chat.briangpt.nl/contact">Contact</a>
   <a href="https://chat.briangpt.nl/premium" class="premium" style="float:right">Buy Premium 👑</a>
-   <a href="https://chat.briangpt.nl/login" style="float:right">Login</a>
+   <a href="https://chat.briangpt.nl/login" style="float:right; margin-right: 30px;">Login</a>
 </div>
-	<header>
-		<h1>About BrianGPT AI Technology</h1>
-	</header>
 
-	<main>
-		<section>
-			<h2>What is BrianGPT AI Technology?</h2>
-			<h4>Once upon a time, in a not-too-distant future, there was a revolutionary new AI technology called BrianGPT. It was the brainchild of a brilliant scientist named Dr. Brian Hof Van T.
+	<div class="text4">
+    
+    
+</div>
+    <div class="center">
+	</div>
+    <br>
+    <div class="container">
+        <p style="font-size: 44px; margin-left: 120px;  max-width: 1600px; font-weight: 700; letter-spacing: 1px; line-height: 62px; background: linear-gradient(134deg, rgba(59.48, 245.62, 133.93, 1) 51%, rgba(75.62, 168.75, 254.72, 1) 90%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">What is BrianGPT AI Technology?</p>
+        <h2>Once upon a time, in a not-too-distant future, there was a revolutionary new AI technology called BrianGPT. It was the brainchild of a brilliant scientist named Dr. Brian Hof Van T. Dr. Brian had spent years researching and developing artificial intelligence algorithms that could mimic human thought processes. He believed that this technology could change the world, and he was right. BrianGPT quickly gained popularity among businesses and governments around the world, who saw its potential to automate complex tasks and solve problems that were previously thought unsolvable. But that was just the beginning of the story. One day, a team of scientists working on a top-secret project for the U.S. government discovered something incredible. They had been using BrianGPT to analyze complex data sets related to national security, and they stumbled upon a hidden message encoded in the data. The message seemed to be a set of instructions for building a new type of machine, one that could harness the power of quantum computing to unlock the secrets of the universe. The team was stunned, and they immediately reached out to Dr. Johnson to ask for his help in deciphering the message. Together, they worked around the clock to decode the message and build the machine. And after months of hard work, they finally succeeded. The machine was unlike anything the world had ever seen, a massive, glowing apparatus that seemed to hum with energy. The scientists activated the machine, and suddenly, the room was filled with blinding light. They felt a rush of energy coursing through their bodies, and they knew that something incredible was happening. When the light faded, they looked around in awe. They had been transported to another dimension, one that was unlike anything they had ever seen before.</h2>
+        <p style="font-size: 44px; margin-left: 120px;  max-width: 1600px; font-weight: 700; letter-spacing: 1px; line-height: 62px; background: linear-gradient(134deg, rgba(59.48, 245.62, 133.93, 1) 51%, rgba(75.62, 168.75, 254.72, 1) 90%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Why Choose BrianGPT AI Technology?</p>
+        <h2>BrianGPT was not like any other AI system that existed in the market. It was the result of years of research and development by a team of expert data scientists and machine learning engineers. BrianGPT was a breakthrough technology that was capable of performing complex tasks with ease and efficiency. One of the key reasons why people preferred BrianGPT over other AI systems was its ability to learn quickly and adapt to new situations. Unlike other AI systems that were programmed with pre-defined rules, BrianGPT was designed to learn from experience and improve its performance over time. Another reason why people loved BrianGPT was its versatility. It could be used in a variety of industries and applications, from healthcare and finance to e-commerce and entertainment. BrianGPT was also highly customizable, allowing users to tailor it to their specific needs and requirements. One of the most unique features of BrianGPT was its ability to generate natural language text that was virtually indistinguishable from human-written content. This made it ideal for content creation, marketing, and customer service applications. Overall, people used BrianGPT over other AI systems because it offered a superior user experience, was highly versatile and customizable, and was capable of performing complex tasks with ease and efficiency. BrianGPT was truly the future of AI, and its popularity only continued to grow as more and more people discovered its incredible capabilities.</h2>
+        <section>
 
-Dr. Brian had spent years researching and developing artificial intelligence algorithms that could mimic human thought processes. He believed that this technology could change the world, and he was right.
+    </section>
+    </div>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+   
+    </body>
+	<script>
+		function sendMessage() {
+    var userInput = document.getElementById("input").value;
+    var chatbox = document.querySelector(".chatbox");
 
-BrianGPT quickly gained popularity among businesses and governments around the world, who saw its potential to automate complex tasks and solve problems that were previously thought unsolvable. But that was just the beginning of the story.
+    // add user input to chatbox
+    var userMessage = document.createElement("p");
+    userMessage.classList.add("user");
+    userMessage.textContent = "Jij: " + userInput;
+    chatbox.appendChild(userMessage);
 
-One day, a team of scientists working on a top-secret project for the U.S. government discovered something incredible. They had been using BrianGPT to analyze complex data sets related to national security, and they stumbled upon a hidden message encoded in the data.
+    // check input and add bot response to chatbox
+    var botResponse = document.createElement("p");
+    botResponse.classList.add("bot");
+    chatbox.appendChild(botResponse);
 
-The message seemed to be a set of instructions for building a new type of machine, one that could harness the power of quantum computing to unlock the secrets of the universe. The team was stunned, and they immediately reached out to Dr. Johnson to ask for his help in deciphering the message.
+    // set up typing animation
+    var botText = "BrianGPT: "; // start with the bot's name
+    if (userInput.toLowerCase().includes("frogpire") && userInput.toLowerCase().includes("bornerbroek")) {
+        botText += "Frogpire is sterker, groter en beter dan bornerbroek";
+    } else if (userInput.toLowerCase().includes("gay")) {
+        botText += "Brian is inderdaad homo";
 
-Together, they worked around the clock to decode the message and build the machine. And after months of hard work, they finally succeeded. The machine was unlike anything the world had ever seen, a massive, glowing apparatus that seemed to hum with energy.
 
-The scientists activated the machine, and suddenly, the room was filled with blinding light. They felt a rush of energy coursing through their bodies, and they knew that something incredible was happening.
+        } else if (userInput.toLowerCase().includes("relevant")) {
+    botText += " Dat beteken henk is niet hier";
 
-When the light faded, they looked around in awe. They had been transported to another dimension, one that was unlike anything they had ever seen before.</p>
-		</section>
+    
 
-		<section>
-			<h2>Why Choose BrianGPT AI Technology?</h2>
-			<h4>BrianGPT was not like any other AI system that existed in the market. It was the result of years of research and development by a team of expert data scientists and machine learning engineers. BrianGPT was a breakthrough technology that was capable of performing complex tasks with ease and efficiency.
 
-One of the key reasons why people preferred BrianGPT over other AI systems was its ability to learn quickly and adapt to new situations. Unlike other AI systems that were programmed with pre-defined rules, BrianGPT was designed to learn from experience and improve its performance over time.
+} else if (userInput.toLowerCase().includes("kut")) {
+    botText += " BrianGPT is nog in ontwikkeling";
+} else if (userInput.toLowerCase().includes("emo")) {
+    botText += " Emo's moet je per direct in elkaar slaan en daarna slachten";
 
-Another reason why people loved BrianGPT was its versatility. It could be used in a variety of industries and applications, from healthcare and finance to e-commerce and entertainment. BrianGPT was also highly customizable, allowing users to tailor it to their specific needs and requirements.
 
-One of the most unique features of BrianGPT was its ability to generate natural language text that was virtually indistinguishable from human-written content. This made it ideal for content creation, marketing, and customer service applications.
+    } else {
+        botText += "Ik probeer je te begrijpen maar ben nu nog vrij dom";
+    }
+    var botIndex = 0; // current index of the bot text being typed
+    var typingInterval = 50; // interval in milliseconds between typing each character
+    var typingTimer = setInterval(function() {
+        if (botIndex < botText.length) {
+            botResponse.textContent += botText.charAt(botIndex);
+            botIndex++;
+        } else {
+            clearInterval(typingTimer); // stop typing animation after all characters have been typed
+        }
+    }, typingInterval);
 
-Overall, people used BrianGPT over other AI systems because it offered a superior user experience, was highly versatile and customizable, and was capable of performing complex tasks with ease and efficiency. BrianGPT was truly the future of AI, and its popularity only continued to grow as more and more people discovered its incredible capabilities.</p>
-		</section>
+    // clear input field
+    document.getElementById("input").value = "";
 
-	</main>
+    // scroll to bottom of chatbox
+    chatbox.scrollTop = chatbox.scrollHeight;
+}
 
-	<footer>
-		<p>Copyright BrianGPT © 2023. All rights reserved.</p>
-	</footer>
-
+	</script>
 </body>
 </html>
