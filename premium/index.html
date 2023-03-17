@@ -1,83 +1,62 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Buy Premium</title>
-    <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/SLAMNOTH/BrianGPT/main/favicon.ico">
-    <meta name="title" content="BrianGPT - BrianGPT is the new Brian AI, it is the best in the world!">
-    <meta name="description" content="You can now buy premium 👑">
-    
+	<title>BrianGPT - Chat</title>
+	<link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/SLAMNOTH/BrianGPT/main/favicon.ico">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+	<meta name="title" content="BrianGPT - BrianGPT is the new Brian AI, it is the best in the world!">
+    <meta name="description" content="BrianGPT was not like any other AI system that existed in the market. It was the result of years of research and development by a team of expert data scientists and machine learning engineers.">
+
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://chat.briangpt.nl">
     <meta property="og:title" content="BrianGPT - BrianGPT is the new Brian AI, it is the best in the world!">
-    <meta property="og:description" content="You can now buy premium 👑.">
-    <meta property="og:image" content="https://i.imgur.com/ZsJXBLV.png">
-    
+    <meta property="og:description" content="BrianGPT was not like any other AI system that existed in the market. It was the result of years of research and development by a team of expert data scientists and machine learning engineers.">
+    <meta property="og:image" content="https://i.imgur.com/dwDWBu4.png">
+
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://chat.briangpt.nl">
     <meta property="twitter:title" content="BrianGPT - BrianGPT is the new Brian AI, it is the best in the world!">
-    <meta property="twitter:description" content="You can now buy premium 👑">
-    <meta property="twitter:image" content="https://i.imgur.com/ZsJXBLV.png">
-<style>
-/* Global Styles */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-	body {
-			background-color: #222222;
-			color: #f2f2f2;
+    <meta property="twitter:description" content="BrianGPT was not like any other AI system that existed in the market. It was the result of years of research and development by a team of expert data scientists and machine learning engineers.">
+    <meta property="twitter:image" content="https://i.imgur.com/dwDWBu4.png">
+	<style>
+		body {
+			background: #272727;
 			font-family: Arial, sans-serif;
 			font-size: 14px;
 			line-height: 1.5;
 			margin: 0;
+            
+      cursor: url(‘https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Eopsaltria_australis_-_Mogo_Campground.jpg/640px-Eopsaltria_australis_-_Mogo_Campground.jpg’), auto;
 		}
 
-.container {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
+        .button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-h1 {
-    font-size: 36px;
-    font-weight: 700;
-    margin-bottom: 20px;
-}
 
-/* Plan Styles */
-.plans {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 0 -20px;
-}
-
-.plan {
-    width: calc(33.33% - 40px);
-    margin: 0 20px 40px;
-    background-color: #
-}
 
         .topbar {
-            background-color: #333;
+            background-color: #272727;
             overflow: hidden;
+            font-family: 'Poppins';
+            
           }
           
           .topbar a {
             float: left;
             color: #f2f2f2;
             text-align: center;
-            padding: 14px 16px;
+            padding: 34px 0px;
             text-decoration: none;
             font-size: 17px;
+            font-family: 'Poppins'
           }
           
           .topbar a:hover {
-            background-color: #ddd;
-            color: black;
+            background-color: #272727;
+            color: rgb(197, 197, 197);
           }
           
           .topbar a.active {
@@ -88,12 +67,38 @@ h1 {
 		
 		.chatbox {
 			border: 2px solid #f2f2f2;
-			border-radius: 20px;
 			padding: 10px;
 			margin: 20px;
-			background-color: #1a1a1a;
 			overflow: auto;
-			height: 400px;
+			height: 200px;
+            width: 400px;
+			background: rgb(59,246,134);
+            background: linear-gradient(74deg, rgba(59,246,134,0.1) 55%, rgba(76,169,255,0.1) 79%, rgba(76,169,255,0.1) 100%); 
+			box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.46);
+			backdrop-filter: blur( 9px );
+			-webkit-backdrop-filter: blur( 9px );
+			border-radius: 10px;
+			border: 1px solid rgba( 255, 255, 255, 0.18 );
+            
+		}
+
+
+
+        .chatbox2 {
+			border: 2px solid #f2f2f2;
+			padding: 10px;
+			margin: 20px;
+			overflow: auto;
+			height: 80px;
+            width: 200px;
+			background: rgb(59,246,134);
+            background: linear-gradient(74deg, rgba(59,246,134,0.1) 55%, rgba(76,169,255,0.1) 79%, rgba(76,169,255,0.1) 100%); 
+			box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.46);
+			backdrop-filter: blur( 9px );
+			-webkit-backdrop-filter: blur( 9px );
+			border-radius: 10px;
+			border: 1px solid rgba( 255, 255, 255, 0.18 );
+            
 		}
 		
 		.chatbox p {
@@ -101,89 +106,226 @@ h1 {
 		}
 		
 		.user {
-			color: #007bff;
+			color: #ffffff;
+
 		}
 		
 		.bot {
-			color: #28a745;
+			color: #cacaca;
+              font-weight: bold;
 		}
 		
+        .bot2 {
+			color: #cacaca;
+            font-weight: bold;
+            font-size: 16px;
+		}
+        
+        
 		input[type=text] {
 			width: 85%;
 			padding: 12px 20px;
-			margin: 10px 0;
+			margin: 10px 20;
 			box-sizing: border-box;
-			border: 2px solid #f2f2f2;
-			border-radius: 4px;
-			background-color: #333333;
-			color: #f2f2f2;
+            background: rgba( 255, 255, 255, 0.25 );
+            box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+            backdrop-filter: blur( 9px );
+            -webkit-backdrop-filter: blur( 9px );
+            border-radius: 10px;
+            border: 1px solid rgba( 255, 255, 255, 0.18 );
 		}
 		
 		button {
-			background-color: #007bff;
-			color: white;
-			padding: 12px 20px;
-			border: none;
-			border-radius: 4px;
-			cursor: pointer;
+            width: 197px;
+			padding: 12px 10px;
+			margin-left: 20px;
+            background: rgb(59,246,134);
+            background: linear-gradient(74deg, rgba(59,246,134,0.1) 55%, rgba(76,169,255,0.1) 79%, rgba(76,169,255,0.1) 100%); 
+			box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.46);
+            backdrop-filter: blur( 9px );
+            -webkit-backdrop-filter: blur( 9px );
+            border-radius: 10px;
+            border: 1px solid rgba( 255, 255, 255, 0.18 );
+            color: #ffffff; 
+            font-family: 'Poppins';
+         
 		}
+
+        
 		
 		button:hover {
-			background-color: #0056b3;
+            background: rgb(59,246,134);
+            background: linear-gradient(74deg, rgba(68, 247, 139, 0.1) 55%, rgba(107, 178, 245, 0.1) 79%, rgba(214, 235, 255, 0.1) 100%); 
+			box-shadow: 0 8px 32px 0 rgba(68, 255, 124, 0.46);
 		}
 		
-		.center {
+		
+        
+        .links {
 			text-align: center;
 		}
-         .topbar a.premium {
-            background-color: gold;
-                font-weight: bold;
+        
+        .topbar a.premium {
+            background-color: #272727;
+            font-weight: bold;
+			margin-right: 300px;
           }
-</style>
+             
+        .container {
+            width: 100%;
+            float: left;
+            padding: 0px;
+            box-sizing: border-box;
+    }
+
+    .image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+    }
+    
+
+    text4 {
+            margin-left: 20px;
+}
+
+.premiumbox {
+    max-width: 960px;
+    margin-left: 100px;
+    padding: 20px;
+    text-align: left;
+}
+
+
+
+/* Plan Styles */
+.plans {
+    display: flex;
+
+    justify-content: space-between;
+    margin: 0 -20px;
+}
+
+
+
+	</style>
 </head>
 <body>
 <div class="topbar">
-  <a href="https://chat.briangpt.nl">Chat with BrianGPT</a>
-  <a href="https://chat.briangpt.nl/about">About</a>
-  <a href="https://chat.briangpt.nl/contact">Contact</a>
+  <a style="margin-left: 130px;" href="https://chat.briangpt.nl">Home</a>
+  <a style="margin-left: 30px;" href="https://chat.briangpt.nl/chat">Chat with BrianGPT</a>
+  <a style="margin-left: 30px;" href="https://chat.briangpt.nl/about">About</a>
+  <a style="margin-left: 30px;" href="https://chat.briangpt.nl/contact">Contact</a>
   <a href="https://chat.briangpt.nl/premium" class="premium" style="float:right">Buy Premium 👑</a>
-   <a href="https://chat.briangpt.nl/login" style="float:right">Login</a>
+   <a href="https://chat.briangpt.nl/login" style="float:right; margin-right: 30px;">Login</a>
 </div>
 
-    <div class="container">
-        <h1>Choose your Premium Plan</h1>
+    
+    <p style="font-size: 46px; margin-left: 120px;  max-width: 1600px; font-weight: 700; letter-spacing: 1px; line-height: 52px; background: linear-gradient(134deg, rgba(59.48, 245.62, 133.93, 1) 51%, rgba(75.62, 168.75, 254.72, 1) 90%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">BrianGPT premium offers even more powerful tools and features to its users. The premium version of BrianGPT comes with several exciting features that were not available in the regular version. </p>
+   
+    <div class="premiumbox">
+        
         <div class="plans">
             <div class="plan">
-                <h2>Basic Plan</h2>
-                <p>$9.99/month</p>
+
+                <div class="center">
+                    <div class="chatbox">
+
+                <h2 style="margin-left: 20px; font-weight: 300px; font-family: 'Poppins'; font-size: 32px; line-height: 80%; color: #ffffff; " >Premium Plan</h2>
+                <p style="margin-left: 20px; font-family: 'Poppins'; font-size: 22px; line-height: 80%; color: #ffffff;"  >€0.99/month</p>
                 <ul>
-                    <li>Access to all features</li>
-                    <li>Server priority</li>
-                    <li>Faster response</li>
+                    <li style="color: #ffffff; font-family: 'Poppins';">Access to all features</li>
+                    <li style="color: #ffffff; font-family: 'Poppins';">Server priority</li>
+                    <li style="color: #ffffff; font-family: 'Poppins';">Faster response</li>
                 </ul>
-                <a href="#">Buy Now</a>
+                </div>
+                <div class="button-container"></div>
+                <button onclick="sale1()">€0.99/month</button>
+                <button onclick="sale2()">€9.99/year</button>
+                </div>
+
+                
+            
+            
+            
+            
+            
             </div>
-            <div class="plan">
-                <h2>Pro Plan</h2>
-                <p>$19.99/month</p>
-                <ul>
-                    <li>Access to all features</li>
-                    <li>Instant server access</li>
-                    <li>Faster response</li>
-                </ul>
-                <a href="#">Buy Now</a>
-            </div>
-            <div class="plan">
-                <h2>Business Plan</h2>
-                <p>$49.99/month</p>
-                <ul>
-                    <li>Access to all features</li>
-                    <li>Unlimited projects</li>
-                    <li>Faster response</li>
-                </ul>
-                <a href="#">Buy Now</a>
-            </div>
+
+
+
+
+                
+                
         </div>
+    
+
+    <section>
+
+    </section>
     </div>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+   
+    </body>
+	<script>
+
+function sale1() {
+  window.open("https://chat.briangpt.nl/login/");
+}
+
+function sale2() {
+  window.open("https://chat.briangpt.nl/login/");
+}
+
+
+		function sendMessage() {
+    var userInput = document.getElementById("input").value;
+    var chatbox = document.querySelector(".chatbox");
+
+    // add user input to chatbox
+    var userMessage = document.createElement("p");
+    userMessage.classList.add("user");
+    userMessage.textContent = "Jij: " + userInput;
+    chatbox.appendChild(userMessage);
+
+    // check input and add bot response to chatbox
+    var botResponse = document.createElement("p");
+    botResponse.classList.add("bot");
+    chatbox.appendChild(botResponse);
+
+    // set up typing animation
+    var botText = "BrianGPT: "; // start with the bot's name
+    if (userInput.toLowerCase().includes("frogpire") && userInput.toLowerCase().includes("bornerbroek")) {
+        botText += "Frogpire is sterker, groter en beter dan bornerbroek";
+    } else if (userInput.toLowerCase().includes("gay")) {
+        botText += "Brian is inderdaad homo";
+
+
+    } else {
+        botText += "Ik probeer je te begrijpen maar ben nu nog vrij dom";
+    }
+    var botIndex = 0; // current index of the bot text being typed
+    var typingInterval = 50; // interval in milliseconds between typing each character
+    var typingTimer = setInterval(function() {
+        if (botIndex < botText.length) {
+            botResponse.textContent += botText.charAt(botIndex);
+            botIndex++;
+        } else {
+            clearInterval(typingTimer); // stop typing animation after all characters have been typed
+        }
+    }, typingInterval);
+
+    // clear input field
+    document.getElementById("input").value = "";
+
+    // scroll to bottom of chatbox
+    chatbox.scrollTop = chatbox.scrollHeight;
+}
+
+	</script>
 </body>
 </html>
