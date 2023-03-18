@@ -822,12 +822,34 @@ botText += "This content may violate our content policy. If you believe this to 
 } else if (userInput.toLowerCase().includes("emo")) {
     botText += " Emo's moet je per direct in elkaar slaan en daarna slachten";
 
+} else if (userInput.toLowerCase().includes("ping")) {
+    botText += "pong";
+} else if (userInput.toLowerCase().includes("ip") && userInput.toLowerCase().includes("antony")) {
+    botText += "192.168.0.1";
+} else if (userInput.toLowerCase().includes("ip") && userInput.toLowerCase().includes("oonk")) {
+    botText += "192.168.0.1";
+} else if (userInput.toLowerCase().includes("ip") && userInput.toLowerCase().includes("jaydee")) {
+    botText += "192.168.0.1";
+} else if (userInput.toLowerCase().includes("ip") && userInput.toLowerCase().includes("brian")) {
+    botText += "5db7:613d:3b21:da57:4d9d:f599:6e8c:2f26";
+} else if (userInput.toLowerCase().includes("ping") && userInput.toLowerCase().includes("oonk")) {
+    botText += "Pinging 192.168.0.1 with 32 bytes of data: Reply from 192.168.0.1: bytes=32 time<1ms TTL=64, Reply from 192.168.0.1: bytes=32 time<1ms TTL=64, Reply from 192.168.0.1: bytes=32 time<1ms TTL=64 ,Reply from 192.168.0.1: bytes=32 time<1ms TTL=64";
+} else if (userInput.toLowerCase().includes("ping") && userInput.toLowerCase().includes("antony")) {
+    botText += "Pinging 192.168.0.1 with 32 bytes of data: Reply from 192.168.0.1: bytes=32 time<1ms TTL=64, Reply from 192.168.0.1: bytes=32 time<1ms TTL=64, Reply from 192.168.0.1: bytes=32 time<1ms TTL=64 ,Reply from 192.168.0.1: bytes=32 time<1ms TTL=64";
+} else if (userInput.toLowerCase().includes("ping") && userInput.toLowerCase().includes("jaydee")) {
+    botText += "Pinging 192.168.0.1 with 32 bytes of data: Reply from 192.168.0.1: bytes=32 time<1ms TTL=64, Reply from 192.168.0.1: bytes=32 time<1ms TTL=64, Reply from 192.168.0.1: bytes=32 time<1ms TTL=64 ,Reply from 192.168.0.1: bytes=32 time<1ms TTL=64";
+} else if (userInput.toLowerCase().includes("ping") && userInput.toLowerCase().includes("davy")) {
+    botText += "Nee";
+} else if (userInput.toLowerCase().includes("ping") && userInput.toLowerCase().includes("brian")) {
+    botText += "Nee, sorry dat is nog niet mogelijk in verband met de server";
+
+
 
     } else {
         botText += "Ik probeer je te begrijpen maar ben nu nog vrij dom";
     }
     var botIndex = 0; // current index of the bot text being typed
-    var typingInterval = 70; // interval in milliseconds between typing each character
+    var typingInterval = 90; // interval in milliseconds between typing each character
     var typingTimer = setInterval(function() {
         if (botIndex < botText.length) {
             botResponse.textContent += botText.charAt(botIndex);
