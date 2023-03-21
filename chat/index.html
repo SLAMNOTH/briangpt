@@ -840,6 +840,8 @@ botText += "This content may violate our content policy. If you believe this to 
 
 } else if (userInput.toLowerCase().includes("kut")) {
     botText += "Kwalitatief Uitermate Teleurstellend";
+} else if (userInput.toLowerCase().includes("kut")) {
+    botText += "Ze dachten dat ik het bier aan haar ging geven kkr homo's daar";
 } else if (userInput.toLowerCase().includes("emo")) {
     botText += " Emo's moet je per direct in elkaar slaan en daarna slachten";
 
@@ -855,7 +857,7 @@ botText += "This content may violate our content policy. If you believe this to 
         botText += "Ik probeer je te begrijpen maar ben nu nog vrij dom";
     }
     var botIndex = 0; // current index of the bot text being typed
-    var typingInterval = 90; // interval in milliseconds between typing each character
+    var typingInterval = 130; // interval in milliseconds between typing each character
     var typingTimer = setInterval(function() {
         if (botIndex < botText.length) {
             botResponse.textContent += botText.charAt(botIndex);
