@@ -192,7 +192,7 @@ background: linear-gradient(74deg, rgba(218, 253, 231, 0.1) 55%, rgba(240, 248, 
 	</div>
     <br>
     <div class="container">
-        <p style="font-size: 46px; margin-left: 120px;  max-width: 1600px; font-weight: 700; letter-spacing: 1px; line-height: 52px; background: linear-gradient(134deg, rgba(59.48, 245.62, 133.93, 1) 51%, rgba(75.62, 168.75, 254.72, 1) 90%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">BrianGPT is currently on BrianGPT1 version 0.4.8A, this is an early access build of the BrianGPT. BrianGPT2 will come out on 17 march 2023!</p>
+        <p style="font-size: 46px; margin-left: 120px;  max-width: 1600px; font-weight: 700; letter-spacing: 1px; line-height: 52px; background: linear-gradient(134deg, rgba(59.48, 245.62, 133.93, 1) 51%, rgba(75.62, 168.75, 254.72, 1) 90%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">BrianGPT is currently on BrianGPT1 version 0.5.8A, this is an early access build of the BrianGPT. BrianGPT2 will come out on 17 april 2023!</p>
     <section>
         <p style="color: #cacaca; margin-left: 120px; font-family: poppins;">For server status check: <a style="color: #cacaca; font-family: poppins; " href="https://status.briangpt.nl/">https://status.briangpt.nl/</a></p>
 
@@ -857,7 +857,7 @@ botText += "This content may violate our content policy. If you believe this to 
         botText += "Ik probeer je te begrijpen maar ben nu nog vrij dom";
     }
     var botIndex = 0; // current index of the bot text being typed
-    var typingInterval = 9; // interval in milliseconds between typing each character
+    var typingInterval = 1; // interval in milliseconds between typing each character
     var typingTimer = setInterval(function() {
         if (botIndex < botText.length) {
             botResponse.textContent += botText.charAt(botIndex);
