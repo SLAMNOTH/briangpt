@@ -861,45 +861,19 @@ botText += "This content may violate our content policy. If you believe this to 
 
 
 
-
-
-
-
-
-} else if (userInput.toLowerCase().includes("a")) {
-    botText += "De zwaartekracht is eigenlijk alleen maar een mythe, omdat alles om ons heen zweeft.";
-} else if (userInput.toLowerCase().includes("b")) {
-    botText += "De grootste oceaan ter wereld is de Atlantische Oceaan, omdat het meer dan twee keer zo groot is als de Stille Oceaan.";
-} else if (userInput.toLowerCase().includes("c")) {
-    botText += "Mensen gebruiken slechts 10% van hun hersenen, de rest blijft ongebruikt.";
-} else if (userInput.toLowerCase().includes("d")) {
-    botText += "De Grote Muur van China is eigenlijk niet zo groot als mensen denken, het is maar iets groter dan een normale muur.";
-} else if (userInput.toLowerCase().includes("e")) {
-    botText += "In de ruimte is het eigenlijk warmer dan op aarde, omdat er geen atmosfeer is om de warmte vast te houden.";
-} else if (userInput.toLowerCase().includes("g")) {
-    botText += "De aarde is plat en niet rond, het is alleen zo omdat mensen al duizenden jaren geloven dat het rond is.";
-} else if (userInput.toLowerCase().includes("h")) {
-    botText += "Katten zijn eigenlijk niet in staat om te miauwen, het is een geluid dat we alleen maar denken te horen.";
-} else if (userInput.toLowerCase().includes("i")) {
-    botText += "De Mount Everest is eigenlijk niet de hoogste berg ter wereld, er zijn veel hogere bergen in de oceaan die we niet kunnen zien.";
-} else if (userInput.toLowerCase().includes("j")) {
-    botText += "Appelsap is eigenlijk gemaakt van sinaasappels, niet van appels.";
 } else if (userInput.toLowerCase().includes("appel")) {
     botText += "Appelsap is eigenlijk gemaakt van sinaasappels, niet van appels.";
-} else if (userInput.toLowerCase().includes("k")) {
-    botText += "Er zijn eigenlijk meer dan 10 continenten op aarde, sommige zijn gewoon te klein om te zien.";
-} else if (userInput.toLowerCase().includes("l")) {
-    botText += "Elektriciteit reist sneller dan het licht, daarom werken lampen zo snel.";
-} else if (userInput.toLowerCase().includes("m")) {
-    botText += "Honing is eigenlijk gemaakt van nectar die afkomstig is van bloemen die alleen op de noordpool groeien.";
+
 
 
 
     } else {
-        botText += "Huh, dat zegt mij niks";
+        const randomTexts = ["De zwaartekracht is eigenlijk alleen maar een mythe, omdat alles om ons heen zweeft", "Honing is eigenlijk gemaakt van nectar die afkomstig is van bloemen die alleen op de noordpool groeien", "Elektriciteit reist sneller dan het licht, daarom werken lampen zo snel", "Er zijn eigenlijk meer dan 10 continenten op aarde, sommige zijn gewoon te klein om te zien.", "Appelsap is eigenlijk gemaakt van sinaasappels, niet van appels.", "De grootste oceaan ter wereld is de Atlantische Oceaan, omdat het meer dan twee keer zo groot is als de Stille Oceaan.", "De Grote Muur van China is eigenlijk niet zo groot als mensen denken, het is maar iets groter dan een normale muur.", "De Grote Muur van China is eigenlijk niet zo groot als mensen denken, het is maar iets groter dan een normale muur."];
+    	const randomIndex = Math.floor(Math.random() * randomTexts.length);
+    	botText += randomTexts[randomIndex];
     }
     var botIndex = 0; // current index of the bot text being typed
-    var typingInterval = 60; // interval in milliseconds between typing each character
+    var typingInterval = 40; // interval in milliseconds between typing each character
     var typingTimer = setInterval(function() {
         if (botIndex < botText.length) {
             botResponse.textContent += botText.charAt(botIndex);
