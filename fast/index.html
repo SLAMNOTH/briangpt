@@ -3,8 +3,8 @@
 <head>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2306386397378799"
      crossorigin="anonymous"></script>
-	<title>BrianGPT - Chat</title>
-	<link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/SLAMNOTH/BrianGPT/main/favicon.ico">
+	<title>💽 BrianGPT - Chat</title>
+
 	
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <meta name="title" content="BrianGPT - BrianGPT is the new Brian AI, it is the best in the world!">
@@ -220,7 +220,7 @@ background: linear-gradient(74deg, rgba(218, 253, 231, 0.1) 55%, rgba(240, 248, 
 
                <button id="send-button" onclick="sendMessage()">Sturen</button>
 
-               <button onclick="window.location.href='https://chat.briangpt.nl/fast/'">New chat +</button>
+               <button onclick="window.location.href='https://chat.briangpt.nl/chat/'">New chat +</button>
 
 
           </div>
@@ -258,7 +258,7 @@ function sendMessage() {
     document.getElementById("send-button").disabled = true;
 
     // set up typing animation
-    var botText = "💾 BrianGPT: "; // start with the bot's name
+    var botText = "💽 BrianGPT: "; // start with the bot's name
     if (userInput.toLowerCase().includes("frogpire") && userInput.toLowerCase().includes("bornerbroek")) {
         botText += "Frogpire is sterker, groter en beter dan bornerbroek";
     } else if (userInput.toLowerCase().includes("gay")) {
@@ -744,6 +744,14 @@ botText += "Leg iets meer uit voor een goede Powershell code!";
 
 } else if (userInput.toLowerCase().includes("weerstand") && userInput.toLowerCase().includes("elektriciteit")) {
     botText += "De eenheid van elektrische weerstand is ohm (Ω).";
+} else if (userInput.toLowerCase().includes("transformator") && userInput.toLowerCase().includes("elektriciteit")) {
+    botText += "Een transformator wordt gebruikt om elektrische energie te transformeren en te transporteren van het ene circuit naar het andere circuit met behulp van elektromagnetische inductie.";
+} else if (userInput.toLowerCase().includes("condensator") && userInput.toLowerCase().includes("elektriciteit")) {
+    botText += "Een condensator slaat elektrische lading op tussen twee geleidende platen die door een isolator van elkaar gescheiden zijn.";
+} else if (userInput.toLowerCase().includes("stroom") && userInput.toLowerCase().includes("elektriciteit")) {
+    botText += "Stroom is de beweging van elektrische lading, meestal door een geleider, zoals een draad, als gevolg van een potentiaalverschil dat wordt aangedreven door een spanningsbron.";
+} else if (userInput.toLowerCase().includes("energietransitie")) {
+    botText += "De energietransitie verwijst naar de overgang van fossiele brandstoffen naar duurzame energiebronnen zoals zonne-energie, windenergie en waterstof. Het is nodig om de klimaatverandering te bestrijden en de afhankelijkheid van niet-hernieuwbare bronnen te verminderen.";
 
     } else if (userInput.toLowerCase().includes("fotosynthese") && userInput.toLowerCase().includes("planten")) {
     botText += "Fotosynthese is het proces waarbij planten lichtenergie omzetten in chemische energie.";
@@ -817,7 +825,7 @@ botText += "Leg iets meer uit voor een goede Powershell code!";
     } else if (userInput.toLowerCase().includes("Buddhisme")) {
     botText += "Het boeddhisme is een religie en filosofie die is gebaseerd op de leer van Gautama Boeddha. Het streeft naar verlichting en innerlijke rust door meditatie en ethisch gedrag.";
 
-    } else if (userInput.toLowerCase().includes("Hubble-telescoop")) {
+    } else if (userInput.toLowerCase().includes("Hubble")) {
     botText += "De Hubble-telescoop is een ruimtetelescoop die in 1990 werd gelanceerd. Het heeft revolutionaire ontdekkingen gedaan in de astronomie, waaronder het waarnemen van verre sterrenstelsels en het bepalen van de leeftijd van het universum.";
 
     } else if (userInput.toLowerCase().includes("Tsunami")) {
@@ -826,7 +834,7 @@ botText += "Leg iets meer uit voor een goede Powershell code!";
     } else if (userInput.toLowerCase().includes("Griekse mythologie")) {
     botText += "De Griekse mythologie is een verzameling verhalen en legendes uit het oude Griekenland. Het omvat goden, godinnen en helden zoals Zeus, Hera, Achilles en Odysseus.";
 
-    } else if (userInput.toLowerCase().includes("Zwarte gaten")) {
+    } else if (userInput.toLowerCase().includes("gat")) {
     botText += "Een zwart gat is een regio in de ruimte waar de zwaartekracht zo sterk is dat niets, zelfs geen licht, kan ontsnappen. Het wordt gevormd door het instorten van een massieve ster of een andere intense gebeurtenis.";
 
 // Lastige vragen
@@ -1023,8 +1031,35 @@ botText += "This content may violate our content policy. If you believe this to 
                 chatbox.scrollTop = chatbox.scrollHeight;
             }
         }, typingInterval);
-    }, 100); // wait for 0 seconds before adding bot response to chatbox
+    }, 100); // wait for 1 seconds before adding bot response to chatbox
 }
+
+
+var pageTitle = document.title; // get the original page title
+		var attentionMessages = ["🙏🏽Blijf bij me!", "❌ Ga niet weg!", "🚛 Het is nog niet over!", "🎅🏽 Bolle oma"]; // messages to show when the page is inactive
+
+		// function to change the page title
+		function changeTitle() {
+			if (document.hidden) { // check if the page is inactive
+				var messageIndex = 0;
+				var attentionTimer = setInterval(function() {
+					document.title = attentionMessages[messageIndex]; // show the current attention message
+					messageIndex = (messageIndex + 1) % attentionMessages.length; // get the next attention message index
+				}, 200); // change the message every second
+				document.addEventListener("visibilitychange", function() {
+					clearInterval(attentionTimer); // stop changing the message when the page becomes active again
+					document.title = pageTitle; // restore the original page title
+				});
+			} else {
+				document.title = pageTitle; // restore the original page title
+			}
+		}
+
+		// add event listeners for page visibility changes
+		document.addEventListener("visibilitychange", changeTitle);
+		document.addEventListener("webkitvisibilitychange", changeTitle);
+		document.addEventListener("mozvisibilitychange", changeTitle);
+		document.addEventListener("msvisibilitychange", changeTitle);
 
 
 
